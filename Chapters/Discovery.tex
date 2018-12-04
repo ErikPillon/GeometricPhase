@@ -1,0 +1,52 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_US
+
+\chapter{Berry discovery of 1983-84}
+Berry discovery of 1983-84 was a new discoveryon the context about adiabatic of quantum mechanics and this work initiated a lot of work worlwide. In Berry's derivation several independent assumptions were made: initially this phese was called the Berry Phase for everyone but over time this name changed to geometric phase and as we'll see this concept is relevant also in classical wave-optical situations. It's quite remarkable that there are some chances that this concept can be used in condensed matter context. On the other hand we hope that the way we're presenting this work can naturally point out the applications.
+
+As we said many work have been done to relax the assumptions that Berry done in order to defend Berry's work under more general conditions. The first important step was taken by A and A in 1987.
+The second important by S and A was taken in 1988 and a third successful step was taken in 1993 and these are the successful and successive steps we'll describe. Apart from these improvements, people were also looking for earlier litteratures from different ideas much earlier then Berry. There are several of them but the most important we will touch upon is the on of Pancharatnam in 1927 that is 27 earlier than Berry work. The fact that the work of Pancharatnam was in the direction of the geometric phase was pointed out by ... and ... in 1986. The other important early work relevant in this subject was the one of Bargman and Valentine in 1964 mostly 20 years before Berry working on discussinf Wigner theorem of 1931, a theorem that Wigner had proved on how symmetric operators can be represented in quantum mechanics. So the th itself is very early (1931); many people had tried to give alternative proof of Wigner Theorem and one very important is given by Bargman in 1964, particularly elegant. The fact that Bargman work was important in the discovery of the Berry phase was pointed out and exploited by Syman and auth. in 1993
+
+These lectures will describe all these thing and more mathematical relevent structures in a more chronological structures, but will not be strictly chronological rigorous. You'll find that many features of QM which we we might be familiar with they will be re examined, re-defined from the geometrical phase pov. When we will come to the kinematic approach we will define some applications. This should give an overviev and an idea of the scope of these lectures.   
+\section{Simplified Form}
+We are now going to present the original Berry's work in a slightly simplified work. This work was originally sent 
+
+We will mainly deal with pure states $ \Hilbert $ with a time dependent Hamiltonian $ \Ham(t) $
+The \wf must satisfy the equation 
+\begin{equation}
+i\hbar \ddt\psi(t)=\Ham(t)\psi(t)
+\label{eq:2.1}
+\end{equation}
+so formally one only has to find 
+\begin{equation}
+\Ham \psi_n=E_n\psi_n, \quad n=1,2,\dots \qquad E_n \text{ real} 
+\end{equation}
+and in general we already have that $ \psi $ can be written as
+\begin{equation}
+\psi=\sum_n c_n\psi_n\to \psi(t)=\sum_n c_n e^{-iE_nt/\hbar}\psi_n.
+\end{equation}
+In principal this procedure is really straightforward:
+\begin{equation}
+\Ham(t)\psi_n(t)=E_n\psi_n(t), \quad n=1,2,\dots \qquad E_n \text{ real}
+\end{equation}
+where we have implicitly supposed the $ E_n $ to be non degenerate and where of course we adopt the following identities
+\begin{align}
+	\sum_n \Ket{\psi_n}\Bra{\psi_n}=\mathds{1}\\
+	\left(\psi_n,\psi_k\right) = \delta_{nk}
+\end{align}
+and each $ \psi_j $ is defined up to a time dependent phase factor.
+
+What we can do is to use eq.\eqref{eq:2.1} for rewriting $ \psi(t) $ as 
+\begin{equation}
+\psi(t)=\sum_n c_n(t)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}\psi_n(t)
+\end{equation}
+So what we will get is
+\begin{align}
+i\hbar\sum_n\left(\dot{c_n}(t)\psi_n(t)-\frac{i}{\hbar}c_n(t)E_n(t)\psi_n(t)+c_n(t)\dot{\psi_n}(t) \right)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}\\
+=c_n(t)E_n(t)\psi_n(t)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}
+\end{align}
+so 
+\begin{align}
+\sum_n\left(\dot{c_n}(t)\psi_n(t)-\frac{i}{\hbar}c_n(t)E_n(t)\psi_n(t)+c_n(t)\dot{\psi_n}(t) \right)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}=0.
+\end{align}
+and now we take the scalar product with the vector $ \psi_k(t) $

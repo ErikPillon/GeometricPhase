@@ -1,0 +1,118 @@
+% !TeX spellcheck = en_EN
+% !TEX encoding = utf8
+\documentclass[12pt,parskip=half, DIV=calc, BCOR=10mm, x11names]{scrbook}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsthm}
+\usepackage{nameref}
+\usepackage{wasysym}
+\usepackage{cleveref}
+\usepackage{url}
+\usepackage{xargs}
+\usepackage{lmodern, libertine}
+\usepackage{amsmath, xcolor, tcolorbox, empheq}
+\usepackage{mathrsfs}
+\usepackage{braket}
+\usepackage{dsfont}
+\usepackage{bbold}
+\usepackage[ilines, headsepline]{scrpage2}
+\setheadwidth[0pt]{textwithmarginpar}
+\usepackage{caption}
+%\input{slike_1} % TikZ pictures
+\clearscrheadfoot
+\ihead{\headmark}
+\ohead{\pagemark}
+
+\setcounter{page}{3}
+
+\addtokomafont{pagenumber}{\bfseries\Large\color{LightBlue4}}
+\addtokomafont{pagehead}{\color{LightBlue4}}
+
+\renewcommand{\textit}[1]{\textcolor{LightBlue4}{\emph{#1}}}
+%\tcbuselibrary{skins,breakable}
+\tcbuselibrary{theorems}
+\tcbset{colback=blue!60!green!10!white,
+	colframe=LightBlue4!50!black, ams nodisplayskip}
+
+\usepackage{graphicx}
+\graphicspath{{Images/}}
+
+\usepackage{hyperref}
+
+\usepackage{mathtools}
+%Hide non-used labeled equations
+\mathtoolsset{showonlyrefs}
+
+%Mark used and unused equations
+%\usepackage{refcheck} 
+
+% ------------------------------------------------
+% ------             COMMANDS --------------------
+\newcommand{\Hilbert}{\mathscr{H}} % Hilbert space
+\newcommand{\Ham}{\mathcal{H}} % Hamiltonian
+\newcommand{\diff}{\mathop{}\!d}
+
+\newcommand{\ddt}{\frac{d}{dt}}
+\newcommand{\qm}{quantum mechanics}
+\newcommand{\wf}{wavefunction}
+% ------------------------------------------------
+
+% Book metadata
+\title{Berry Phase: an Introduction}
+\date{\today}
+\author{Erik, Pillon}
+
+\usepackage{emerald}
+\begin{document}
+\maketitle
+\frontmatter
+
+% All the lecture notes authored by Erik Pillon appearing on any webpage by Erik Pillon are licensed under a Creative Commons Attribuzione-Non commerciale-Non opere derivate 2.5 Italia License.
+
+\section*{Acknowledgments}
+This set of lecture notes accompanies prof. Mukundan Seminar course on Geometric Phase, taught from $ 10^{th} $ to $ 15^{th} $ March 2014.
+
+The entire course is hosted on YouTube at the following address:
+\begin{center}
+	\url{https://www.youtube.com/playlist?list=PLhkiT_RYTEU15TB17zx32tbHGZ0mB6aSP}
+\end{center}
+These lecture notes are not endorsed by prof. Mukundan.
+
+While I have tried to correct typos and errors made during the lectures (some helpfully pointed out by YouTube commenters), I have also taken the liberty to add and/or modify some of the material at various points in the notes. Any errors that may result from this are, of course, mine.
+
+%If you have any comments regarding these notes, feel free to get in touch. Visit my
+%blog for the most up to date version of these notes
+%http://mathswithphysics.blogspot.com
+%My gratitude goes to Dr. Schuller for lecturing this course and for making it available
+%on YouTube.
+
+\hfill {\ECFJD \Large Erik Pillon ~~~}
+\tableofcontents
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INIZIO DISPENSA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{Chapters/Introduction}
+\input{Chapters/Discovery}
+\input{Chapters/First_Generalization}
+%\input{Chapters}
+%\input{Chapters}
+%\input{Chapters}
+%\input{Chapters}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FINE CORPO DEL DIARIO....
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+
+\end{document}
