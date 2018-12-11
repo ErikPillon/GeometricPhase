@@ -2,51 +2,121 @@
 % !TeX spellcheck = en_US
 
 \chapter{Berry discovery of 1983-84}
-Berry discovery of 1983-84 was a new discoveryon the context about adiabatic of quantum mechanics and this work initiated a lot of work worlwide. In Berry's derivation several independent assumptions were made: initially this phese was called the Berry Phase for everyone but over time this name changed to geometric phase and as we'll see this concept is relevant also in classical wave-optical situations. It's quite remarkable that there are some chances that this concept can be used in condensed matter context. On the other hand we hope that the way we're presenting this work can naturally point out the applications.
+Berry discovery of 1983-84\footnote{We say 1983-1984 since the original work was apparently submitted in 1983 but was at first instance rejected. However a preprint of his work must have been around since in 1983 another work on the Berry Phase appeared on Physical Review Letter. That's why sometimes the date can be misleading.} was a new discovery on the context about adiabatic of quantum mechanics and this work initiated a lot of work worldwide. In Berry's derivation several independent assumptions were made: initially this phase was called the Berry Phase for everyone but over time this name changed to geometric phase and as we'll see this concept is relevant also in classical wave-optical situations. It's quite remarkable that there are some chances that this concept can be used in condensed matter context. On the other hand we hope that the way we're presenting this work can naturally point out the applications.
 
-As we said many work have been done to relax the assumptions that Berry done in order to defend Berry's work under more general conditions. The first important step was taken by A and A in 1987.
-The second important by S and A was taken in 1988 and a third successful step was taken in 1993 and these are the successful and successive steps we'll describe. Apart from these improvements, people were also looking for earlier litteratures from different ideas much earlier then Berry. There are several of them but the most important we will touch upon is the on of Pancharatnam in 1927 that is 27 earlier than Berry work. The fact that the work of Pancharatnam was in the direction of the geometric phase was pointed out by ... and ... in 1986. The other important early work relevant in this subject was the one of Bargman and Valentine in 1964 mostly 20 years before Berry working on discussinf Wigner theorem of 1931, a theorem that Wigner had proved on how symmetric operators can be represented in quantum mechanics. So the th itself is very early (1931); many people had tried to give alternative proof of Wigner Theorem and one very important is given by Bargman in 1964, particularly elegant. The fact that Bargman work was important in the discovery of the Berry phase was pointed out and exploited by Syman and auth. in 1993
+As we said many work have been done to relax the assumptions that Berry done in order to defend Berry's work under more general conditions. The first important step was taken by \citet{aharonov1987phase}.
+The second important by S and A was taken in 1988 and a third successful step was taken in 1993 and these are the successful and successive steps we'll describe. Apart from these improvements, people were also looking for earlier litteratures from different ideas much earlier then Berry. There are several of them but the most important we will touch upon is the on of Pancharatnam\citet{pancharatnam1956generalized} in 1957, that is, 27 earlier than Berry work. The fact that the work of Pancharatnam was in the direction of the geometric phase was pointed out by ... and ... in 1986. The other important early work relevant in this subject was the one of Bargman and Valentine in 1964 mostly 20 years before Berry working on discuss inf Wigner theorem of 1931, a theorem that Wigner had proved on how symmetric operators can be represented in quantum mechanics. So the th itself is very early (1931); many people had tried to give alternative proof of Wigner Theorem and one very important is given by Bargman in 1964, particularly elegant. The fact that Bargman work was important in the discovery of the Berry phase was pointed out and exploited by Syman and auth. in 1993
 
-These lectures will describe all these thing and more mathematical relevent structures in a more chronological structures, but will not be strictly chronological rigorous. You'll find that many features of QM which we we might be familiar with they will be re examined, re-defined from the geometrical phase pov. When we will come to the kinematic approach we will define some applications. This should give an overviev and an idea of the scope of these lectures.   
+These lectures will describe all these thing and more mathematical relevant structures in a more chronological structures, but will not be strictly chronological rigorous. You'll find that many features of QM which we we might be familiar with they will be re examined, re-defined from the geometrical phase pov. When we will come to the kinematic approach we will define some applications. This should give an overview and an idea of the scope of these lectures.   
 \section{Simplified Form}
-We are now going to present the original Berry's work in a slightly simplified work. This work was originally sent 
+We are now going to present the original Berry's work in a slightly simplified work. 
 
-We will mainly deal with pure states $ \Hilbert $ with a time dependent Hamiltonian $ \Ham(t) $
-The \wf must satisfy the equation 
+Having a quantum mechanical system in mind and a general setting, we will mainly deal with pure states $ \Hilbert $ with a time dependent Hamiltonian $ \Ham(t) $ governing the system and we have a state vector describing the system $ \psi(t) $.
+The \wf must satisfy the (time dependent) \Sch equation 
 \begin{equation}
 i\hbar \ddt\psi(t)=\Ham(t)\psi(t)
 \label{eq:2.1}
 \end{equation}
-so formally one only has to find 
+If the Hamiltonian had be time independent, a formal solution of the \Sch equation is easy to find because what we have to do is to formally take the Hamiltonian and find out all its eigenfunctions and eigenvalues
 \begin{equation}
 \Ham \psi_n=E_n\psi_n, \quad n=1,2,\dots \qquad E_n \text{ real} 
 \end{equation}
-and in general we already have that $ \psi $ can be written as
+for simplicity let us assume everything is discrete while $ E_n $ are all real because of the hermiticity of the Hamiltonian and in general one has to express $ \psi $ as a linear combination of the basis elements and for each element has to add a time dependent exponential factor
 \begin{equation}
 \psi=\sum_n c_n\psi_n\to \psi(t)=\sum_n c_n e^{-iE_nt/\hbar}\psi_n.
 \end{equation}
-In principal this procedure is really straightforward:
+In principal this procedure is easy and really straightforward:
 \begin{equation}
 \Ham(t)\psi_n(t)=E_n\psi_n(t), \quad n=1,2,\dots \qquad E_n \text{ real}
 \end{equation}
-where we have implicitly supposed the $ E_n $ to be non degenerate and where of course we adopt the following identities
+where we have implicitly supposed the $ E_n $ to be non degenerate and constant in time. $ \psi_n $ are called the stationary states of the system and of course the $ \psi_n $ form a complete set of orthonormal vector basis
 \begin{align}
 	\sum_n \Ket{\psi_n}\Bra{\psi_n}=\mathds{1}\\
 	\left(\psi_n,\psi_k\right) = \delta_{nk}
 \end{align}
-and each $ \psi_j $ is defined up to a time dependent phase factor.
+but each $ \psi_j $ is defined up to an independent phase factor.
 
-What we can do is to use eq.\eqref{eq:2.1} for rewriting $ \psi(t) $ as 
+Let us now discuss the case of a time dependent Hamiltonian; at each time where have to use the Hamiltonian evaluated at that time, so generalizing what written above
+\begin{equation}
+\Ham(t) \psi(t)_n=E_n(t)\psi_n(t), \quad n=1,2,\dots \qquad E_n(t) \text{ real} 
+\end{equation}
+and as the Hamiltonian changes in time, then its eigenvalues do.
+Of course at each time the eigenvalues form again a complete orthonormal set. This is, in principle, available to us.
+\begin{rem}
+	We stress again the fact that each eigenfunction is determined up to a phase. This factor can be both dependent on time and on $ n $.
+\end{rem}
+Now, there is no hope to recover the exact solution, even though you have solved the eigenvalue problem for each time. What we can do is to use eq.\eqref{eq:2.1} for rewriting $ \psi(t) $ as 
 \begin{equation}
 \psi(t)=\sum_n c_n(t)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}\psi_n(t)
+\label{eq:2.4}
 \end{equation}
+and it will reduce to \eqref{eq:2.1} in the case of time independence.
 So what we will get is
 \begin{align}
 i\hbar\sum_n\left(\dot{c_n}(t)\psi_n(t)-\frac{i}{\hbar}c_n(t)E_n(t)\psi_n(t)+c_n(t)\dot{\psi_n}(t) \right)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}\\
 =c_n(t)E_n(t)\psi_n(t)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}
 \end{align}
-so 
+so, erasing the equal terms, we obtain
 \begin{align}
 \sum_n\left(\dot{c_n}(t)\psi_n(t)-\frac{i}{\hbar}c_n(t)E_n(t)\psi_n(t)+c_n(t)\dot{\psi_n}(t) \right)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}=0.
+\label{eq:2.5}
 \end{align}
 and now we take the scalar product with the vector $ \psi_k(t) $
+\begin{equation}
+\dot{c}_n=-\sum_n c_n(t)e^{-\frac{i}{\hbar}\int_{0}^{t}(E_k(t')-E_n(t'))\diff t'} \left(\psi_k(t),\dot{\psi}_n(t) \right) \qquad \forall k 
+\end{equation}
+\begin{rem}
+	The last equation is exact! There are no approximations involved so far!
+\end{rem}
+
+Let's focus for the moment on the term $ \left(\psi_k(t),\dot{\psi}_n(t) \right) $
+
+\begin{equation}
+\Ham(t) \psi(t)_n=E_n(t)\psi_n(t), \quad n=1,2,\dots  
+\end{equation}
+and we differentiate wrt time
+\begin{equation}
+\pd{}{t}\Ham(t)\psi_n(t) +\Ham(t)\dot{\psi}_n(t)=\pd{}{t}E_n(t)\psi_n(t)+E_n(t)\dot{\psi}_n(t)
+\end{equation}
+and we take again the scalar product with a generic state $ \psi_k(t) $
+\begin{equation}
+\left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right)+E_k(t)\left(\psi_k(t),\dot{\psi}_n(t) \right)=\dot{E}_n(t)\delta_{nk}+E_n\left(\psi_k(t),\dot{\psi}_n(t) \right)
+\end{equation}
+from which we obtain
+\begin{equation}
+\left(E_n(t)-E_k(t)\right)\left(\psi_k(t),\dot{\psi}_n(t) \right)=-\dot{E}_n(t)\delta_{nk}+\left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right)
+\end{equation}
+If we restrict ourselves at the specific case $ k=n $
+\begin{equation}
+\dot{E}_(t)=\left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right)
+\end{equation}
+while in the case $ k\neq n $ we can straightforwardly derive from the eigenvalue problem
+\begin{equation}
+\left(\psi_k(t),\dot{\psi}_n(t)\right)=\frac{\left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right)}{\left(E_n(t)-E_k(t)\right)}
+\end{equation}
+
+So this is what we can say about the factor $ \left(\psi_k(t),\dot{\psi}_n(t)\right) $ and we agree to restrict the phase factor to be such that 
+\begin{equation}
+\left(\psi_k(t),\dot{\psi}_n(t)\right)=0, \qquad \forall t
+\label{eq:requirement}
+\end{equation}
+\begin{rem}
+	Making use of the requirement \eqref{eq:requirement}, the phase freedom is eliminated.
+\end{rem}
+
+\begin{align}
+\dot{c}_k(t)=&-\sum_{n\neq k}c_n(t)e^{i\int_0^t\omega_{kn}(t')\diff t'} \left(\psi_k(t),\dot{\psi}_n(t)\right) \\
+=&\sum_{n\neq k} \frac{c_n(t)}{\hbar\omega_{nk}(t)}e^{i\int_0^t\omega_{kn}(t')\diff t'}\left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right) \qquad \forall k
+\end{align}
+where we defined $ \omega_{nk}(t)=\frac{E_k(t)-E_n(t)}{\hbar} $.
+
+
+\subsection{Adiabatic condition}
+The so called \emph{Adiabatic condition} is a result mainly due to Born\&Fock in 1928 \cite{born1928m}
+
+\begin{equation}
+\pd{\Ham}{t}(t) \text{ is "small"}
+\end{equation}
+Physically, it's reasonable to say that the quantities $ \psi_n(t), E_n(t) $ and $ c_n(t) $ are expected to slowly change in time.
+
+Suppose to have as initial solution $ \psi(0)=\psi_n(0) $, so we have $ c_k(0)=\delta_{kn} $(the same chosen in \eqref{2.12})

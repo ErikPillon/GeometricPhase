@@ -1,0 +1,24 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aharonov and Anandan(1987)]{aharonov1987phase}
+Yakir Aharonov and J~Anandan.
+\newblock Phase change during a cyclic quantum evolution.
+\newblock \emph{Physical Review Letters}, 58\penalty0 (16):\penalty0 1593,
+  1987.
+
+\bibitem[Born(1928)]{born1928m}
+M~Born.
+\newblock M. born and v. fock, z. phys. 51, 165 (1928).
+\newblock \emph{Z. Phys.}, 51:\penalty0 165, 1928.
+
+\bibitem[Pancharatnam(1956)]{pancharatnam1956generalized}
+Shivaramakrishnan Pancharatnam.
+\newblock Generalized theory of interference and its applications.
+\newblock 44\penalty0 (6):\penalty0 398--417, 1956.
+
+\end{thebibliography}

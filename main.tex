@@ -11,7 +11,7 @@
 \usepackage{url}
 \usepackage{xargs}
 \usepackage{lmodern, libertine}
-\usepackage{amsmath, xcolor, tcolorbox, empheq}
+\usepackage{xcolor, tcolorbox, empheq}
 \usepackage{mathrsfs}
 \usepackage{braket}
 \usepackage{dsfont}
@@ -19,6 +19,8 @@
 \usepackage[ilines, headsepline]{scrpage2}
 \setheadwidth[0pt]{textwithmarginpar}
 \usepackage{caption}
+\usepackage[round]{natbib}
+\bibliographystyle{plainnat}
 %\input{slike_1} % TikZ pictures
 \clearscrheadfoot
 \ihead{\headmark}
@@ -42,10 +44,15 @@
 
 \usepackage{mathtools}
 %Hide non-used labeled equations
-\mathtoolsset{showonlyrefs}
+%\mathtoolsset{showonlyrefs}
 
 %Mark used and unused equations
-%\usepackage{refcheck} 
+\usepackage{refcheck} 
+% ------------------------------------------------
+% ------            ENVIRONMENTS        ----------
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+% ------------------------------------------------
 
 % ------------------------------------------------
 % ------             COMMANDS --------------------
@@ -56,6 +63,15 @@
 \newcommand{\ddt}{\frac{d}{dt}}
 \newcommand{\qm}{quantum mechanics}
 \newcommand{\wf}{wavefunction}
+\newcommand{\Sch}{Schr\"odinger}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pds}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+\renewcommand{\div}{\mathrm{div}}
+\newcommand{\dt}{\Delta t}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
 % ------------------------------------------------
 
 % Book metadata
@@ -104,15 +120,15 @@ While I have tried to correct typos and errors made during the lectures (some he
 %\input{Chapters}
 %\input{Chapters}
 %\input{Chapters}
-
+%\nocite{*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FINE CORPO DEL DIARIO....
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
 
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibliographystyle{plain}
-\bibliography{bibliography}
+%\bibliographystyle{plainnat}
+\bibliography{bib}
 
 
 \end{document}
