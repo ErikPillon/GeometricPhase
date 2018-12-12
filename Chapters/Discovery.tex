@@ -120,3 +120,68 @@ The so called \emph{Adiabatic condition} is a result mainly due to Born\&Fock in
 Physically, it's reasonable to say that the quantities $ \psi_n(t), E_n(t) $ and $ c_n(t) $ are expected to slowly change in time.
 
 Suppose to have as initial solution $ \psi(0)=\psi_n(0) $, so we have $ c_k(0)=\delta_{kn} $(the same chosen in \eqref{2.12})
+
+So now we have that if the condition 
+\begin{equation}
+\frac{1}{\omega_{kn}}\abs{\left(\psi_k,\pd{\Ham}{t}(t)\psi_n\right)}<<\hbar\omega_{kn}, \qquad \forall k\neq n
+\end{equation}
+is satisfied, then
+\begin{equation}
+\psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t'}E_n(t)\diff t}\psi_n(t)
+\end{equation}
+And now comes the step taken by Berry; suppose $ \Ham(t) $ is cyclic, that is, $ \Ham(0)=\Ham(T) $ for some $ T $\footnote{Cyclic condition on the Hamiltonian}.
+\begin{center}
+	\textbf{Question: How behaves the approximate solution?}
+\end{center}
+Answer: the solution must be cyclic in some sense.Because of the non degeneracy and no crossing levels, we have 
+\begin{align}
+E_n(T)=&E_n(0)\\
+\psi(0)=\psi_n(0)\quad\Rightarrow& \quad\psi(T)\simeq e^{-\frac{i}{\hbar}\int_{0}^{T}E_n(t)\diff t}\psi_n(T)
+\end{align}
+by the Adiabatic Theorem.
+
+By the way, the original question remains: is this solution cyclic? The answer is still \textbf{yes} but we have $ \psi(T)=\psi(0) $ apart from a phase, i.e., 
+\begin{equation}
+\psi(T)=\text{(n-dependent phse)}\psi_n(0)
+\end{equation}
+It follows then the following equalities:\footnote{They're all approximate in the sense of the adiabatic theorem, but we put the equality sign with no confusion}.
+\begin{empheq}[box=\fbox]{align}
+	\psi_n(T)&=e^{i\phi_{geom}^{(n)}}\psi_n(0)\\
+	\psi(T)&\simeq e^{i\phi_{tot}^{(n)}}\psi(0) \qquad i.e., \qquad \phi_{tot}^{(n)}=\mathrm{arg}\left(\psi(0),\psi(T)\right)\\
+	\phi_{tot}^{(n)}&=\phi_{geom}^{(n)}+\phi_{dyn}^{(n)} \qquad i.e. \qquad 
+	\phi_{geom}^{(n)}=\phi_{tot}^{(n)}-\phi_{dyn}^{(n)}
+	\label{eq:Berry_discovery}
+\end{empheq}
+where we defined 
+\begin{equation}
+\phi_{dyn}^{(n)}=\dfrac{i}{\hbar}\int_{0}^TE_n(t)\diff t
+\end{equation}
+Eq. \eqref{eq:Berry_discovery} is regarded as the original discovery of Berry.
+
+% ---------------------------------------------
+\section{Berry original derivation with parameter space}
+Berry said: the Hamiltonian, apart from being hermitian, depends on a set of external parameters, let's say $ \rp $, that is $ \Ham\equiv\Ham(\rp) $ with $ \rp $ belonging to a multidimensional real parameter space. We now let $ \rp $ itself to be time dependent, so that the Hamiltonian si explicitely time dependent $ \Ham(\rp(t)) $. The parameter that varies adiabatically is of course now $ \rp(t) $.
+
+
+\begin{equation}
+\mathcal{C}=\left\{\rp(t)|0\leq t\leq T \right\}
+\end{equation}
+
+\begin{align}
+\Ham(t)\Ket{n;\rp}=E_n(\rp)\Ket{n;\rp}\\
+\Braket{n';\rp|n;\rp}=\delta_{n'n}
+\end{align}
+and we have of course an orthonormal basis at each point of the multidimensional parameters space.
+
+At this stage Berry recover the Adiabatic Theorem:
+\begin{equation}
+\begin{cases}
+i\hbar\dot{\psi}(t)=\Ham(\rp(t))\psi(t)\\
+\psi(0)=\Ket{0;\rp(0)}
+\end{cases}
+\end{equation}
+which gives the solution
+\begin{equation}
+\psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(\rp(t'))\diff t'+\gamma_n(t)}\Ket{n;\rp(t)}
+\end{equation}
+and now we have to plug the solution into the \Sch equation

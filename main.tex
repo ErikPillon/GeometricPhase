@@ -5,6 +5,29 @@
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage{amsmath,amsthm}
+
+% ----------------------------------------------
+\usepackage{empheq}
+% Command "alignedbox{}{}" for a box within an align environment
+% Source: http://www.latex-community.org/forum/viewtopic.php?f=46&t=8144
+\newlength\dlf  % Define a new measure, dlf
+\newcommand\alignedbox[2]{
+	% Argument #1 = before & if there were no box (lhs)
+	% Argument #2 = after & if there were no box (rhs)
+	&  % Alignment sign of the line
+	{
+		\settowidth\dlf{$\displaystyle #1$}  
+		% The width of \dlf is the width of the lhs, with a displaystyle font
+		\addtolength\dlf{\fboxsep+\fboxrule}  
+		% Add to it the distance to the box, and the width of the line of the box
+		\hspace{-\dlf}  
+		% Move everything dlf units to the left, so that & #1 #2 is aligned under #1 & #2
+		\boxed{#1 #2}
+		% Put a box around lhs and rhs
+	}
+}
+% ----------------------------------------------
+
 \usepackage{nameref}
 \usepackage{wasysym}
 \usepackage{cleveref}
@@ -58,6 +81,7 @@
 % ------             COMMANDS --------------------
 \newcommand{\Hilbert}{\mathscr{H}} % Hilbert space
 \newcommand{\Ham}{\mathcal{H}} % Hamiltonian
+\newcommand{\rp}{\underline{\textrm{R}}}
 \newcommand{\diff}{\mathop{}\!d}
 
 \newcommand{\ddt}{\frac{d}{dt}}
