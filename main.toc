@@ -4,4 +4,4 @@
 \contentsline {section}{\numberline {2.1}Simplified Form}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Adiabatic condition}{7}{subsection.2.1.1}
 \contentsline {section}{\numberline {2.2}Berry original derivation with parameter space}{8}{section.2.2}
-\contentsline {chapter}{Bibliography}{11}{equation.2.2.36}
+\contentsline {chapter}{Bibliography}{11}{equation.2.2.50}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  12 DEC 2018 22:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  13 DEC 2018 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1629,46 +1629,79 @@ Package refcheck Warning: Unlabelled equation (\relax 2.29) on input line 154.
 Package refcheck Warning: Unlabelled equation (\relax 2.31) on input line 158.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.32) on input line 168.
+Package refcheck Warning: Unlabelled equation (\relax 2.33) on input line 174.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.33) on input line 173.
+Package refcheck Warning: Unlabelled equation (\relax 2.34) on input line 174.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.34) on input line 173.
+Package refcheck Warning: Unlabelled equation (\relax 2.35) on input line 183.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.35) on input line 182.
+Package refcheck Warning: Unlabelled equation (\relax 2.36) on input line 187.
+
+[8]
+
+Package refcheck Warning: Unlabelled equation (\relax 2.37) on input line 194.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.36) on input line 186.
-
-) (./Chapters/First_Generalization.tex) [8] [9] [10
+Package refcheck Warning: Unlabelled equation (\relax 2.38) on input line 200.
 
 
-] (./main.bbl) [11
+Package refcheck Warning: Unlabelled equation (\relax 2.39) on input line 204.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 2.40) on input line 216.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 2.41) on input line 225.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 2.42) on input line 230.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 2.43) on input line 230.
+
+[9]
+
+Package refcheck Warning: Unlabelled equation (\relax 2.44) on input line 235.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 2.47) on input line 259.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 2.48) on input line 259.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 2.49) on input line 259.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 2.50) on input line 259.
+
+) (./Chapters/First_Generalization.tex) [10] (./main.bbl) [11
+
+
 
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
-
-(./main.aux)
+ (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3897EF11BC3592AB13F2FB027E005B63;382.
+(rerunfilecheck)             Checksum: F007F404E612045EFEBC0B7DA777E364;382.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 24549 strings out of 493029
- 452599 string characters out of 6136233
+ 24580 strings out of 493029
+ 452999 string characters out of 6136233
  634926 words of memory out of 5000000
- 27519 multiletter control sequences out of 15000+600000
- 114002 words of font info for 93 fonts, out of 8000000 for 9000
+ 27531 multiletter control sequences out of 15000+600000
+ 114412 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,100p,1245b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
@@ -1692,11 +1725,12 @@ nts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
 1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (17 pages, 440026 bytes).
+ive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/wasy2-ps/wasy10.pfb>
+Output written on main.pdf (17 pages, 453544 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
- 233 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 88 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

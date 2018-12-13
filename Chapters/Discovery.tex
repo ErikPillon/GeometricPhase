@@ -165,6 +165,7 @@ Berry said: the Hamiltonian, apart from being hermitian, depends on a set of ext
 
 \begin{equation}
 \mathcal{C}=\left\{\rp(t)|0\leq t\leq T \right\}
+\label{eq:Curve_C}
 \end{equation}
 
 \begin{align}
@@ -185,3 +186,75 @@ which gives the solution
 \psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(\rp(t'))\diff t'+\gamma_n(t)}\Ket{n;\rp(t)}
 \end{equation}
 and now we have to plug the solution into the \Sch equation
+
+% --------- Second Lecture ------------
+From the initial condition $ \psi(0)=\psi_n(0) $ we have
+\begin{equation}
+\psi(t)=\sum_{n'}c_{n'}(t)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}\psi_{n'}(t)
+\end{equation}
+
+Then, if $ n'\neq n $, $ \dot{c}_n(t)\simeq 0 $ if $ \abs{\left(\psi_{n'},\pd{\Ham}{t}(t)\psi_n \right) }<<(E_{n'}-E_{n})/\hbar, $
+then we have $ \dot{c}_n(t)\simeq0, c_n(t)\simeq 1. $ And so this means that the \Sch solution takes the form of:
+\begin{equation}
+\psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}\psi_{n'}(t) \xrightarrow[t\to T]{} e^{-\frac{i}{\hbar}\int_{0}^{T}E_n(t)\diff t}\psi_{n}(t)\underbrace{\psi_n(T)}_{e^{i\phi_{geom}^{(n)}}\psi_n(0)}
+\end{equation}
+
+\begin{equation}
+\psi(T)\simeq \underbrace{e^{i\phi_{tot}^{(n)}}}_{\underbrace{e^{\frac{i}{\hbar}\int_{0}^{T}E_n(t)\diff t}}_{\text{dyn}}\times\underbrace{e^{i\phi_{geom}^{(n)}}}_{\text{geom}}}\psi(0).
+\end{equation}
+
+\begin{rem}
+	The set $ \Ket{n;\rp} $ form a set of single-valued eigenvectors in the space we are concerning, Pay attention that this is a different remark than the condition $ \left(\psi_n(t),\dot{\psi}_n(t) \right) $.
+\end{rem}
+
+Suppose to have the following situation: $ \psi(0)=\Ket{n,\rp(0)} $, that is, the initial condition is in one of the eigenstates for the Hamiltonian. Its time evolution is then defined by
+\begin{equation}
+\begin{cases}
+\psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(\rp(t'))\diff t'+i\gamma_n(t)}\Ket{n;\rp(t)}\\
+\gamma_n(t)=0
+\end{cases}
+\end{equation}
+
+\begin{rem}
+	What Berry did is the following: he applied the Adiabatic Theorem and obtained an approximated solution for $ \psi(t) $. He then put $ \psi(t) $ itself into the \Sch Equation and derived an equation of motion for $ \gamma_n(t) $
+\end{rem}
+
+So after some algebra we have, as a consequence of the Adiabatic Theorem,
+\begin{equation}
+\dot{\gamma}_n(t)\Ket{n;\rp(t)}\simeq i\ddt \Ket{n,\rp(t)}
+\end{equation}
+and then sandwiching with a Ket,
+\begin{align}
+	\dot{\gamma}_n(t)&\simeq i\Bra{n;\rp(t)}\ddt\Ket{n:\rp(t)}\\
+	&=i\Bra{n;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}\dot{\rp}(t)
+\end{align}
+
+\begin{rem}
+	We notice that the result \begin{equation}
+	\dot{\gamma}_n(t)\simeq i\Bra{n;\rp(t)}\ddt\Ket{n:\rp(t)}
+	\end{equation}
+	is a consequence of the \Sch Equation and not a condition imposed on the system.
+\end{rem}
+\begin{rem}
+	We have $ \Ket{n;\rp(0)}=\Ket{n;\rp(T)} $ since they're globally well defined.
+\end{rem}
+
+Performing the circuitation along the curve $ \mathcal{C} $ defined in \eqref{eq:Curve_C}, we have
+\begin{equation}
+\gamma_n(T)\equiv \gamma_n(0)=i\oint_{\mathcal{C}}\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\rp
+\label{eq:2.26}\end{equation} 
+and this is exactly what we wrote above.
+
+In the end, we see that 
+\begin{equation}
+\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}=i\Im\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}
+\label{eq:2.27}
+\end{equation}
+and so plugging \eqref{eq:2.27} into \eqref{eq:2.26} we obtain
+\begin{align}
+\gamma_n(\mathcal{C})&=-\Im \oint \Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\rp\\
+&=-\Im\iint_{\mathcal{S}}\nabla_n\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\mathcal{S}\\
+&=-\Im\iint_{\mathcal{S}}\left(\underline{\nabla}\Bra{n;\rp}\right)\wedge\left(\underline{\nabla}\Ket{n;\rp}\right)\cdot\diff\mathcal{S}\\
+&= -\Im \iint_{\mathcal{S}}\left(\sum_{m\neq n}\underline{\nabla}\Bra{n;\rp}\right)\Ket{m;\rp}\wedge\Bra{m;\rp}\underline{\nabla}\Ket{n;\rp}
+\end{align}
+and the term $ m=n $ is neglected since gives a zero contribution
