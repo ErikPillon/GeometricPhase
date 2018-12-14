@@ -1,0 +1,83 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_US
+\chapter{Aharonov-Anandan and Samuel-Bhandari generalizations}
+\section{Aharonov-Anandan generalization (1987)}
+The first relaxation was taken in \cite{aharonov1987phase} where the authors considered the Adiabatic Hypothesis: they showed that the latter is not needed in order to get a geometric effect. 
+
+Let us take a $ t $-dependent Hamiltonian
+\begin{equation}
+i\hbar\ddt\psi(t)=\Ham(t)\psi(t)
+\end{equation}
+and assume that the system is cyclic in the sense that 
+\begin{equation}
+\psi(T)=e^{i\psi_{tot}}\psi(0)
+\label{eq:3.1}
+\end{equation}
+No assumptions on the cyclicity of the Hamiltonian is assumed in \eqref{eq:3.1}, but if we have a periodicity on the solution we have 
+\begin{equation}
+\phi_{geom}=\psi_{tot}-\phi_{dyn}
+\end{equation}
+where
+\begin{equation}
+\phi_{dyn}=-\dfrac{i}{\hbar}\int_{0}^{T}\Bra{\psi(t)}\Ham(t)\Ket{\psi(t)}\diff t
+\end{equation}
+
+\begin{enumerate}
+	\item
+	\item 
+\end{enumerate}
+
+\begin{equation}
+\B=\left\{\psi\in\Hilbert\colon \Braket{\psi,\psi}=1\right\}\subset\Hilbert
+\end{equation}
+We notice immediately that $ \B $ is not a linear vector space. We define therefore the transformation
+\begin{equation}
+\psi\in\B\Rightarrow \psi'=e^{i\alpha}\psi\in\B,\qquad 0\leq\alpha\leq 2\pi
+\end{equation}
+The idea is that two vectors that differ only by a phase factor should be regarded as equivalent. We can also define now the equivalence class by fixing $ \psi $ and letting $ \alpha $ varying:
+\begin{equation}
+\mathcal{R}:=\left\{\rho(\psi)=\Ket{\psi}\Bra{\psi} \text{ or } \psi^{\dagger}\psi | \psi\in\B \right\}.
+\end{equation}
+We will call $ \mathcal{R} $ \textit{real space}, while $ \rho $ is the well known projective operator. We notice that if we denote by $ N $ the dimension of the Hilbert space $ \Hilbert $, then we have that $ \dim(\mathcal{R}) $ has $ 2(N-1) $ real dimensions (or equivalently $ N-1 $ complex dimensions).
+We define as well the inverse of the projection operator, the operator $ \pi $, in the following way:
+\begin{equation}
+\pi\colon \B\to\mathcal{R} \qquad \colon \qquad \psi\in\B\rightarrow \rho(\psi)=\psi^{\dagger}\psi\in\mathcal{R}
+\end{equation}
+and goes into $ CP^{N-1} $.
+
+Points in the real space are in $ 1-1 $ correspondence with the pure real state of the system. The mathematical description is
+\begin{equation}
+\rho(\psi)\in\mathcal{R}\to\pi^{-1}(\rho(\psi)):=\left\{\psi'=e^{i\alpha}\psi\in\B|\psi \text{ fixed }, 0\leq\alpha\leq 2\pi \right\}\subset \B
+\end{equation}
+
+We now consider curves on the space $ \B $. Given a curve 
+\begin{equation}
+\mathcal{C}:=\left\{\psi(s)\in\B |s_1\leq s\leq s_2 \right\}\subset \B
+\end{equation}
+we consider its projection into the real space $ \mathcal{R} $ through $ \pi $ into the set 
+\begin{equation}
+C=\pi\left[\mathcal{C}\right]=\left\{\rho(\psi(s))=\psi(s)\psi^{\dagger}(s)\in\mathcal{R}|s_1\leq s\leq s_2 \right\}.
+\end{equation}
+So for our purposes the most general curve will be 
+\begin{equation}
+\mathcal{C}'=\left\{\psi'(s)=e^{i\alpha(s)}\psi(s)|\psi(s)\in\mathcal{C}, s_1\leq s\leq s_2 \right\},
+\end{equation}
+that denotes all the possible lifts of the original projected curve. Now comes natural to define the tangent vector 
+\begin{align}
+	u(s)&=\dfrac{d}{ds}\psi(s)=\dot{\psi}(s)\\
+	(\psi(s),\dot{\psi}(s))&=\Im(\psi(s),u(s))\\
+	u'(s)&=e^{i\alpha(s)}(u(s)+i\dot{\alpha}(s)\psi(s))\\
+	u_{\perp}(s)&=u(s)-\psi(s)(\psi(s),u(s))=u_{\perp}'(s)=e^{i\alpha(s)}u_{\perp}(s)\\
+	\mathcal{L}\left[\mathcal{C}\right]&=\int_{s_1}^{s_2}\left(u_{\perp}(s),u_{\perp}(s)\right)^{1/2}\cdot\diff s \\
+	&=\int_{s_1}^{s_2}\left\{\left(\dot{\psi}(s),\dot{\psi}(s)\right)-\left(\psi(s),\dot{\psi}(s)\right)-\left(\dot{\psi}(s),\psi(s)\right) \right\}^{1/2} \diff s
+\end{align}
+
+\begin{enumerate}[i]
+	\item $ \rho_1=\rho(\psi_1),\rho_2=\rho(\psi_2) $; then $ \Tr(\rho_1\rho_2)>0, $ i.e., $ \abs{\left(\psi_1,\psi_2\right)}\neq 0 $, then exists an unique geodesic $ \mathcal{C}_0 $
+	\item $ \psi_1\in\pi^{-1}(\rho_1), \psi_2\in\pi^{-1}(\rho_2) $
+	\begin{equation}
+	\left(\psi_1,\psi_2 \right)=\cos\theta, \qquad 0\leq \theta\leq\pi(\alpha)
+	\end{equation}
+	In general the inner product between two complex quantities gives a complex quantity. If they're real and positive definite, they're said to be in phase one each other in the Plancherel sense.
+	\item If we consider the geodesic $ \mathcal{C}_0 $ from $ \rho_1 $ to $ \rho_2 $ and then we take the lift
+\end{enumerate}

@@ -4,4 +4,7 @@
 \contentsline {section}{\numberline {2.1}Simplified Form}{4}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Adiabatic condition}{7}{subsection.2.1.1}
 \contentsline {section}{\numberline {2.2}Berry original derivation with parameter space}{8}{section.2.2}
-\contentsline {chapter}{Bibliography}{11}{equation.2.2.50}
+\contentsline {subsection}{\numberline {2.2.1}Two fold degeneracies}{11}{subsection.2.2.1}
+\contentsline {chapter}{\numberline {3}Aharonov-Anandan and Samuel-Bhandari generalizations}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Aharonov-Anandan generalization (1987)}{13}{section.3.1}
+\contentsline {chapter}{Bibliography}{17}{Item.5}

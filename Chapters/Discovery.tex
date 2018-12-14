@@ -257,4 +257,49 @@ and so plugging \eqref{eq:2.27} into \eqref{eq:2.26} we obtain
 &=-\Im\iint_{\mathcal{S}}\left(\underline{\nabla}\Bra{n;\rp}\right)\wedge\left(\underline{\nabla}\Ket{n;\rp}\right)\cdot\diff\mathcal{S}\\
 &= -\Im \iint_{\mathcal{S}}\left(\sum_{m\neq n}\underline{\nabla}\Bra{n;\rp}\right)\Ket{m;\rp}\wedge\Bra{m;\rp}\underline{\nabla}\Ket{n;\rp}
 \end{align}
-and the term $ m=n $ is neglected since gives a zero contribution
+and the term $ m=n $ is neglected since gives a zero contribution.
+
+Then from $ \Ham(\rp)\Ket{n;\rp}=E_n(\rp)\Ket{n;\rp} $ we obtain that for $ m\neq n $
+\begin{equation}
+\Bra{m;\rp}\underline{\nabla}\Ket{n;\rp}=\dfrac{\Bra{m;\rp}\underline{\nabla}\Ham(\rp)\Ket{n;\rp}}{E_n(\rp)-E_m(\rp)}
+\end{equation}
+with \begin{equation}
+\gamma_n(\mathcal{C})=-\iint_{\mathcal{S}}V_n(\rp)\cdot\diff\mathcal{S}
+\end{equation}
+where we defined $ V_n $ as 
+\begin{equation}
+V_n(\rp):=\Im\sum_{m\neq n}\dfrac{\Bra{n;\rp}\underline{\nabla}\Ham(\rp)\Ket{m;\rp}\wedge\Bra{m;\rp}\underline{\nabla}\Ham(\rp)\Ket{n;\rp}}{\left(E_n(\rp)-E_m(\rp)\right)^2}
+\label{eq:2.31}
+\end{equation}
+\begin{rem}
+	Berry's comment at this stage is that the result does not depend on $ \rp $ since the gradient is only acting on $ \Ham(\rp) $, so it is independent on the choice of the phase of the wavefunction.
+	\label{rem:freedom}
+\end{rem}
+Remark \ref{rem:freedom} leads to an enormous amount of freedom in the choice of the global phase $ \chi(\rp) $
+\begin{equation}
+\Ket{n;\rp}\to e^{i\chi(\rp)}\Ket{n;\rp}
+\end{equation}
+\subsection{Two fold degeneracies}
+What is the phase in the proximity of a two folds degeneracy?
+
+We can suppose in $ \rp=0 $ we have a degeneracy for the Hamiltonian. So if we are far from zero, we have o problems at all, but if we are close to $ 0, $ we have to work in a different way. The two crossing levels are the most important, so from a Quantum Mechanical point of view, the problem is only a two level problem.
+\begin{align}
+	\Ham(\underline{0})=0; \qquad & \Ham(\rp)=\Ket{\pm;\rp}=E_{\pm}(\rp)=\Ket{\pm;\rp}\\
+	& E_{+}(\rp)>E_-(\rp),\qquad \rp\neq 0\\
+	& E_{+}(\underline{0})=E_{-}(\underline{0})=0.
+\end{align} 
+So, now, without any loss of generality, we can make use of the Pauli Matrices:
+\begin{align}
+	\Ham(\rp)=\dfrac{1}{2};\qquad E_{\pm}(\rp)=\pm\dfrac{1}{2}R, \qquad R=\abs{\rp}\\
+	\Ket{+;\rp}\Bra{+;\rp}=\dfrac{1}{2}\left(1\pm \hat{R}\cdot\underline{\sigma} \right)\label{eq:2.33}
+\end{align}
+And so we have to plug \eqref{eq:2.33} into \eqref{eq:2.31} immediately recognizing that $ E_n(0)-E_m(0)=+\frac{1}{2}R-(-\frac{1}{2}R) $. Then 
+\begin{equation}
+\underline{V}_{+}(\rp)=\frac{R_j}{2R^3}
+\label{eq:2.35}
+\end{equation}
+
+So now comes the result of Berry: the phase gained by the \wf is exactly given by the integration of \eqref{eq:2.35} and is the solid angle shifted by the curve $ \mathcal{C} $. Berry refereed to this result as the \textit{magnetic field of a "magnetic monopole"}
+\begin{equation}
+\gamma_{+}(\mathcal{C})=-\dfrac{1}{2}\Omega\left[\mathcal{C}\right], \qquad \Omega\left[\mathcal{C}\right]=\text{solid angle at \underline{0}}
+\end{equation}
