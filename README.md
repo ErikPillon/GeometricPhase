@@ -10,4 +10,7 @@ Lecture Notes for the Seminar Course given by prof. Mukundan about the Geometric
         1. Two fold degeneracies
 3. Aharonov-Anandan and Samuel-Bhandari generalizations
     1. Aharonov-Anandan generalization (1987)
+    2. S-R generalization (1988)
+4. The kinematic approach and the Bargmann’s Invariant
+    1. Bargmann’s Invariant . .
 4. Bibliography
