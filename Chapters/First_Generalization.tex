@@ -65,7 +65,7 @@ So for our purposes the most general curve will be
 that denotes all the possible lifts of the original projected curve. Now comes natural to define the tangent vector 
 \begin{align}
 	u(s)&=\dfrac{d}{ds}\psi(s)=\dot{\psi}(s)\\
-	(\psi(s),\dot{\psi}(s))&=\Im(\psi(s),u(s))\\
+	(\psi(s),\dot{\psi}(s))&=\Im(\psi(s),u(s))\label{eq:3.12}\\
 	u'(s)&=e^{i\alpha(s)}(u(s)+i\dot{\alpha}(s)\psi(s))\\
 	u_{\perp}(s)&=u(s)-\psi(s)(\psi(s),u(s))=u_{\perp}'(s)=e^{i\alpha(s)}u_{\perp}(s)\\
 	\mathcal{L}\left[\mathcal{C}\right]&=\int_{s_1}^{s_2}\left(u_{\perp}(s),u_{\perp}(s)\right)^{1/2}\cdot\diff s \\
@@ -80,4 +80,51 @@ that denotes all the possible lifts of the original projected curve. Now comes n
 	\end{equation}
 	In general the inner product between two complex quantities gives a complex quantity. If they're real and positive definite, they're said to be in phase one each other in the Plancherel sense.
 	\item If we consider the geodesic $ \mathcal{C}_0 $ from $ \rho_1 $ to $ \rho_2 $ and then we take the lift
+	\begin{gather}
+	\mathcal{C}_0=\left\{\psi_0(s)=\psi_1\cos(s)+(\psi_2-\psi_1\cos\theta)\frac{\sin s}{\sin\theta}\mid 0\leq s\leq\theta \right\}\subset\B\\
+	\dot{\psi}_0(s)=u_0(s)=-\psi_1\sin s+(\psi_2-\psi_1\cos\theta)\dfrac{\cos s}{\sin \theta}\\
+	(u_0(s),u_0(s))=1, \qquad (\psi_0(s),u_0(s))=0,\\
+	u_{\perp}(s)=u_0(s),\qquad \pi\left[\mathcal{C}_0 \right]=\mathcal{C}_0\\
+	\mathcal{L}\left[\pi\left[\mathcal{C}_0 \right] \right]=\theta
+	\end{gather}
 \end{enumerate}
+
+Now we want to introsuce another geometrical object: 
+\begin{equation}
+\mathcal{A}=\text{one-form on $ \mathcal{B} $} = -i\psi^{\dagger}\diff \psi
+\end{equation}
+On every $ \mathcal{C}\subset\B $ (recalling equation \eqref{eq:3.12})
+\begin{equation}
+\-i\int_{s_1}^{s_2}\left(\psi(s),\frac{d}{ds}\psi(s)\right)\diff s=\Im\int_{s_1}^{s_2}\left(\psi(s),u(s)\right)\diff s
+\end{equation}
+and the last integral does not depend on how we parametrize it; it's a geometric object.
+In the language og differential geometry it is 
+\begin{equation}
+\int_{\mathcal{C}_0}\mathcal{A}
+\end{equation}
+and its integral along any curve is the dynamical phase.
+
+\section{S-R generalization (1988)}
+\textbf{cyclic condition is also not needed for achieving a geometric phase}
+
+\begin{align}
+\mathcal{C_0}= \text{geodesic in $ \mathcal{R} $}&\Rightarrow \mathcal{C_0}=\text{special lift of $ \mathcal{C}_0 $ to $ \B $}\\
+&\Rightarrow \mathcal{C}=\text{general lift of $ \mathcal{C}_0 $ to $ \B $}
+\end{align}
+
+\begin{equation}
+\int_{\mathcal{C}_0}\mathcal{A}=\Im\int_{0}^{\theta}(\psi(s),u(s)\diff S=\arg(\psi(0),\psi(\theta))
+\end{equation}
+So how's they did: take the hermitian Hamiltonian $ \Ham $
+\begin{equation}
+i\hbar \ddt \psi(t)=\Ham(t)\psi(t)
+\end{equation}
+and now consider the set of points 
+\begin{equation}
+\left\{0\leq t\leq T\colon\psi(t) \text{ is a solution} \right\}\equiv \mathcal{C}_0\subset \B
+\end{equation}
+
+\begin{equation}
+\phi_{geom}\left[\text{Energetic \Sch equation} \right]=\oint_{\mathcal{C}_0}\mathcal{A}.
+\end{equation}
+This is the tool in order to relax the assumption of the cyclic Hamiltonian.

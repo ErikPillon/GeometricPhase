@@ -7,4 +7,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Two fold degeneracies}{11}{subsection.2.2.1}
 \contentsline {chapter}{\numberline {3}Aharonov-Anandan and Samuel-Bhandari generalizations}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Aharonov-Anandan generalization (1987)}{13}{section.3.1}
-\contentsline {chapter}{Bibliography}{17}{Item.5}
+\contentsline {section}{\numberline {3.2}S-R generalization (1988)}{16}{section.3.2}
+\contentsline {chapter}{\numberline {4}The kinematic approach and the Bargmann's Invariant}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Bargmann's Invariant}{17}{section.4.1}
+\contentsline {chapter}{Bibliography}{19}{section.4.1}

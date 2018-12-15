@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  14 DEC 2018 16:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  15 DEC 2018 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1538,9 +1538,14 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 [3]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 19.
+
+Overfull \hbox (7.25827pt too wide) in paragraph at lines 19--21
+\T1/LinuxLibertineT-TLF/m/n/12 If the Hamil-to-nian had be time in-de-pen-dent,
+ a for-mal so-lu-tion of the Schrödinger
+ []
+
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 22.
-
 
 Package refcheck Warning: Unlabelled equation (\relax 2.2) on input line 23.
 
@@ -1773,9 +1778,6 @@ Package refcheck Warning: Unlabelled equation (\relax 3.12) on input line 64.
 Package refcheck Warning: Unlabelled equation (\relax 3.13) on input line 73.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.14) on input line 73.
-
-
 Package refcheck Warning: Unlabelled equation (\relax 3.15) on input line 73.
 
 
@@ -1791,10 +1793,61 @@ Package refcheck Warning: Unlabelled equation (\relax 3.18) on input line 73.
 
 Package refcheck Warning: Unlabelled equation (\relax 3.19) on input line 80.
 
-) [15] [16
+
+Package refcheck Warning: Unlabelled equation (\relax 3.20) on input line 89.
 
 
-] (./main.bbl) [17
+Package refcheck Warning: Unlabelled equation (\relax 3.21) on input line 89.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.22) on input line 89.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.23) on input line 89.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.24) on input line 89.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.25) on input line 95.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.26) on input line 99.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.27) on input line 104.
+
+[15]
+
+Package refcheck Warning: Unlabelled equation (\relax 3.28) on input line 113.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.29) on input line 113.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.30) on input line 117.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.31) on input line 121.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.32) on input line 125.
+
+
+Package refcheck Warning: Unlabelled equation (\relax 3.33) on input line 129.
+
+) (./Chapters/kinematic.tex [16]
+chapter 4.
+
+Package refcheck Warning: Unlabelled equation (\relax 4.1) on input line 12.
+
+) [17
+
+
+] [18
+
+
+] (./main.bbl) [19
 
 
 ]
@@ -1803,25 +1856,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 162.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 162.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 162.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 6E7C6BB1DBC58C6AEC80534B82095B00;853.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 5375370F9EBD55F7600BEDE3674C5D10;629
-(rerunfilecheck)             After:  410BDE3D19F38A37ABD0D25ACDF0E2D1;620.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 24782 strings out of 493029
- 455900 string characters out of 6136233
- 635748 words of memory out of 5000000
- 27665 multiletter control sequences out of 15000+600000
- 118008 words of font info for 111 fonts, out of 8000000 for 9000
+ 24816 strings out of 493029
+ 456380 string characters out of 6136233
+ 635751 words of memory out of 5000000
+ 27675 multiletter control sequences out of 15000+600000
+ 118244 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,100p,1245b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
@@ -1850,10 +1897,10 @@ lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/wasy2-ps/wasy10.pfb>
-Output written on main.pdf (23 pages, 480595 bytes).
+Output written on main.pdf (25 pages, 488712 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
- 133 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 451 PDF objects out of 1000 (max. 8388607)
+ 398 compressed objects within 4 object streams
+ 153 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
