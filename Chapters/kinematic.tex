@@ -1,9 +1,17 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_US
 \chapter{The kinematic approach and the Bargmann's Invariant}
-
+\begin{equation}
+\mathcal{C}\to\mathcal{C}'=\left\{\psi'(s')=\psi(s)\mid s'=f(s),\pd{df(s)}{ds}\geq 0 \right\}
+\end{equation}
 \textbf{The key idea is to look at all the possible transformations that we can apply to the initial curves preserving the reparametrization invariance and the gauge invariance}
 
-
-
+\begin{align}
+	\phi_{geom}\left[\mathcal{C} \right]&=\phi_{tot}\left[ \mathcal{C}\right]-\phi_{dyn}\left[\mathcal{C}\right]\label{eq:parametrization_invariant}\\
+	\phi_{tot}\left[\mathcal{C}\right]&=\arg(\psi(s_1),\psi(s_2)\\
+	\phi_{dyn}\left[\mathcal{C}\right]&=\Im\int_{s_1}^{s_2}\left(\psi(s),\pd{d\psi(s)}{ds}\right)\diff s=-i\int_{s_1}^{s_2}\left(\psi(s),\pd{d\psi(s)}{ds}\right)\diff s=\int_{\mathcal{C}}\mathcal{A}\diff s
+\end{align}
+And the quantity in \eqref{eq:parametrization_invariant} needs to be reparametrization invariant and gauge invariant.
 
 
 
@@ -11,3 +19,18 @@
 \phi_{geom}\left[\text{any geometric in $ \mathcal{R} $} \right]=0.
 \end{equation}
 \section{Bargmann's Invariant}
+\begin{equation}
+\psi_{j},\quad j=1,2,3, \in \B
+\end{equation}
+\begin{align}
+\Delta_3\left(\psi_1,\psi_2,\psi_3\right)&=\left(\psi_1,\psi_2\right)\left(\psi_2,\psi_3\right)\left(\psi_3,\psi_1\right)\\
+&=\Tr(\rho_1\rho_2\rho_3)
+\end{align}
+Where by $ \rho_i, i=1,2,3 $ we denoted the density matrices and we recall that their product is a ray space quantity.
+
+So in general the phase of the Bargmann quantity can be shown to be a geometric phase
+\begin{align}
+	\arg(\Delta_3\left(\psi_1,\psi_2,\psi_3\right))&=\arg(\psi_1,\psi_2)+\arg(\psi_2,\psi_3)+\arg(\psi_3,\psi_1)\\
+	&=\phi_{dyn}\left[\mathcal{C}_{12}\right]+\phi_{dyn}\left[\mathcal{C}_{23}\right]+\phi_{dyn}\left[\mathcal{C}_{31}\right]\\
+	&=\phi_{dyn}\left[\mathcal{C}_{12}\cup\mathcal{C}_{23}\cup\mathcal{C}_{31} \right]
+\end{align}
