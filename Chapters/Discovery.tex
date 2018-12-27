@@ -74,80 +74,102 @@ Let's focus for the moment on the term $ \left(\psi_k(t),\dot{\psi}_n(t) \right)
 \begin{equation}
 \Ham(t) \psi(t)_n=E_n(t)\psi_n(t), \quad n=1,2,\dots  
 \end{equation}
-and we differentiate wrt time
+and we differentiate with respect to time on both sides
 \begin{equation}
 \pd{}{t}\Ham(t)\psi_n(t) +\Ham(t)\dot{\psi}_n(t)=\pd{}{t}E_n(t)\psi_n(t)+E_n(t)\dot{\psi}_n(t)
 \end{equation}
-and we take again the scalar product with a generic state $ \psi_k(t) $
+and again we take again the scalar product with a generic state $ \psi_k(t) $
 \begin{equation}
 \left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right)+E_k(t)\left(\psi_k(t),\dot{\psi}_n(t) \right)=\dot{E}_n(t)\delta_{nk}+E_n\left(\psi_k(t),\dot{\psi}_n(t) \right)
 \end{equation}
-from which we obtain
+so it is appropriate to collect some terms, creating an energy difference, obtaining 
 \begin{equation}
 \left(E_n(t)-E_k(t)\right)\left(\psi_k(t),\dot{\psi}_n(t) \right)=-\dot{E}_n(t)\delta_{nk}+\left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right)
 \end{equation}
+and the previous result is true in general! There are no approximations involved at all!
+
 If we restrict ourselves at the specific case $ k=n $
 \begin{equation}
 \dot{E}_(t)=\left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right)
 \end{equation}
-while in the case $ k\neq n $ we can straightforwardly derive from the eigenvalue problem
+while in the case $ k\neq n $ we can straightforwardly derive from the eigenvalue problem \footnote{Remember that we assumed non degeneracy in energy spectrum in all the time}
 \begin{equation}
 \left(\psi_k(t),\dot{\psi}_n(t)\right)=\frac{\left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right)}{\left(E_n(t)-E_k(t)\right)}
 \end{equation}
+So we found an explicit expression relating the relative energy gap in time, the time derivative of the Hamiltonian and the scalar product of the time derivative of the wavefunction with any other wavefunction. We remark that each time dependent wavefunction $ \psi_n(t) $ is defined up to a phase factor that can depend on $ n $ and may depend on time. With this freedom we are left all alone. 
 
-So this is what we can say about the factor $ \left(\psi_k(t),\dot{\psi}_n(t)\right) $ and we agree to restrict the phase factor to be such that 
+So from now on we agree to restrict the phase factor to be for each $ n $ such that 
 \begin{equation}
-\left(\psi_k(t),\dot{\psi}_n(t)\right)=0, \qquad \forall t
+\left(\psi_k(t),\dot{\psi}_n(t)\right)=0, \qquad \forall n
 \label{eq:requirement}
 \end{equation}
 \begin{rem}
-	Making use of the requirement \eqref{eq:requirement}, the phase freedom is eliminated.
+	Making use of the requirement \eqref{eq:requirement}, the phase freedom is eliminated. Once we chose a phase factor at time $ t=0 $ for $ \psi_n(0) $, no more flexibility is left.
 \end{rem}
 
 \begin{align}
 \dot{c}_k(t)=&-\sum_{n\neq k}c_n(t)e^{i\int_0^t\omega_{kn}(t')\diff t'} \left(\psi_k(t),\dot{\psi}_n(t)\right) \\
-=&\sum_{n\neq k} \frac{c_n(t)}{\hbar\omega_{nk}(t)}e^{i\int_0^t\omega_{kn}(t')\diff t'}\left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right) \qquad \forall k
+=&\sum_{n\neq k} \frac{c_n(t)}{\hbar\omega_{nk}(t)}e^{i\int_0^t\omega_{kn}(t')\diff t'}\left(\psi_k(t),\pd{\Ham(t)}{t}\psi_n(t) \right) \qquad \forall k 
+\label{eq:2.11}
 \end{align}
 where we defined $ \omega_{nk}(t)=\frac{E_k(t)-E_n(t)}{\hbar} $.
-
+\begin{rem}
+	We stress again that Eq.\eqref{eq:2.11} is obtain manipulating the \Sch equation only letting the Hamiltonian to vary in time.
+\end{rem}
 
 \subsection{Adiabatic condition}
-The so called \emph{Adiabatic condition} is a result mainly due to Born\&Fock in 1928 \cite{born1928m}
+Now we go to the \emph{adiabatic situation}. The so called \emph{Adiabatic condition} is a result mainly due to Born\&Fock in 1928 \cite{born1928m}
 
+The main assumption we'll do is that the Hamiltonian we're considering is a slowly varying operator, that is to say
 \begin{equation}
 \pd{\Ham}{t}(t) \text{ is "small"}
 \end{equation}
-Physically, it's reasonable to say that the quantities $ \psi_n(t), E_n(t) $ and $ c_n(t) $ are expected to slowly change in time.
+The term "small" will be quantitatively clear later on while, physically, it's reasonable to say that the quantities $ \psi_n(t), E_n(t) $ and $ c_n(t) $ are expected to slowly change in time.
 
-Suppose to have as initial solution $ \psi(0)=\psi_n(0) $, so we have $ c_k(0)=\delta_{kn} $(the same chosen in \eqref{2.12})
+Let's then continue with the original work of Fock and Born, back to 1928: suppose to have as initial solution $ \psi(0)=\psi_n(0) $, that is to say that the original initial state is equal to a particular eigenvector of the Hamiltonian at time $ t=0 $. So we have $ c_k(0)=\delta_{kn} $(the same chosen in \eqref{2.12})
 
-So now we have that if the condition 
+Notice that our reasoning is perfectly consistent in the framework of the first order perturbation theory; since the term $ \pd{\Ham}{t} $ is explicitly appearing in \eqref{eq:2.11}, we can expand the equation and ignore all the upper degree terms, we have that for $ k\neq n $, 
 \begin{equation}
-\frac{1}{\omega_{kn}}\abs{\left(\psi_k,\pd{\Ham}{t}(t)\psi_n\right)}<<\hbar\omega_{kn}, \qquad \forall k\neq n
+\dot{c}_n(t)\simeq \dfrac{1}{\hbar\omega_{kn}}e^{i\omega_{kn}t}\left(\psi_k,\pd{\Ham}{t}(t)\psi_n\right)
+\end{equation}
+while for the $ n $-th term we have $ c_n(t)\simeq 1 $: it starts at 1 and stay fixed for all times. 
+The $ \dot{c}_n(t) $ can be instead integrated and 
+\begin{equation}
+c_n(t)\simeq -\dfrac{1}{\hbar\omega_{kn}^2}\left(e^{i\omega_{kn}t}-1\right)\left(\psi_k,\pd{\Ham}{t}(t)\psi_n\right)
+\end{equation}
+and so, while the term $ c_n $ remains close to 1, all the other terms, despite the fact that they start from zero, they change significantly in the way explicited above. 
+
+So,once is provided that the condition 
+\begin{equation}
+\frac{1}{\omega_{kn}}\abs{\left(\psi_k,\pd{\Ham}{t}(t)\psi_n\right)}\ll\hbar\omega_{kn}, \qquad \forall k\neq n
+\label{eq:2.14}
 \end{equation}
 is satisfied, then
 \begin{equation}
 \psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t'}E_n(t)\diff t}\psi_n(t)
 \end{equation}
+and this closes the statement of the adiabatic theorem of quantum mechanics.
+\begin{rem}
+	Eq.\eqref{eq:2.14} is the quantitative statement of what we mean by "adiabatic condition".
+\end{rem}
+
 And now comes the step taken by Berry; suppose $ \Ham(t) $ is cyclic, that is, $ \Ham(0)=\Ham(T) $ for some $ T $\footnote{Cyclic condition on the Hamiltonian}.
 \begin{center}
-	\textbf{Question: How behaves the approximate solution?}
+	\textbf{Question: How behaves the approximate solution? Are they cyclic in a similar sense?}
 \end{center}
-Answer: the solution must be cyclic in some sense.Because of the non degeneracy and no crossing levels, we have 
+Answer: the solution must be cyclic in some sense. Because of the non degeneracy and no crossing levels, we have that the eigenvalues of $ \Ham(T) $ are the same of $ \Ham(0) $
 \begin{align}
 E_n(T)=&E_n(0)\\
 \psi(0)=\psi_n(0)\quad\Rightarrow& \quad\psi(T)\simeq e^{-\frac{i}{\hbar}\int_{0}^{T}E_n(t)\diff t}\psi_n(T)
 \end{align}
-by the Adiabatic Theorem.
-
-By the way, the original question remains: is this solution cyclic? The answer is still \textbf{yes} but we have $ \psi(T)=\psi(0) $ apart from a phase, i.e., 
+by the Adiabatic Theorem. And now we ask: is this a cyclic solution? The answer is still \textbf{yes} but we have $ \psi(T)=\psi(0) $ apart from a phase, i.e., 
 \begin{equation}
 \psi(T)=\text{(n-dependent phse)}\psi_n(0)
 \end{equation}
 It follows then the following equalities:\footnote{They're all approximate in the sense of the adiabatic theorem, but we put the equality sign with no confusion}.
 \begin{empheq}[box=\fbox]{align}
-	\psi_n(T)&=e^{i\phi_{geom}^{(n)}}\psi_n(0)\\
-	\psi(T)&\simeq e^{i\phi_{tot}^{(n)}}\psi(0) \qquad i.e., \qquad \phi_{tot}^{(n)}=\mathrm{arg}\left(\psi(0),\psi(T)\right)\\
+	\psi_n(T)&=e^{i\phi_{geom}^{(n)}}\psi_n(0)\label{eq:geometric_phase}\\
+	\psi(T)&\simeq e^{i\phi_{tot}^{(n)}}\psi(0) \qquad i.e., \qquad \phi_{tot}^{(n)}=\mathrm{arg}\left(\psi(0),\psi(T)\right)\label{eq:total_phase}\\
 	\phi_{tot}^{(n)}&=\phi_{geom}^{(n)}+\phi_{dyn}^{(n)} \qquad i.e. \qquad 
 	\phi_{geom}^{(n)}=\phi_{tot}^{(n)}-\phi_{dyn}^{(n)}
 	\label{eq:Berry_discovery}
@@ -156,77 +178,102 @@ where we defined
 \begin{equation}
 \phi_{dyn}^{(n)}=\dfrac{i}{\hbar}\int_{0}^TE_n(t)\diff t
 \end{equation}
-Eq. \eqref{eq:Berry_discovery} is regarded as the original discovery of Berry.
+
+So, in the end, this is the original work of Berry presented in a slightly different language.
+\begin{rem}
+	Eq. \eqref{eq:Berry_discovery} is regarded as the original discovery of Berry. Eq\eqref{eq:total_phase} is the definition of $ \phi_{tot} $; it is something we defined using the result of the Adiabatic Theorem: if there are no degeneracies andd no crossing levels, then every  approximate solution given by the adiabatic condition will also be cyclic. %instead the relation between the wavefunction at time $ T $ and time $ t=0 $ while 
+	\eqref{eq:geometric_phase} instead defines how every phase of every wavefunction evolves in time provided that condition \eqref{eq:requirement} is  satisfied. We recall that \eqref{eq:requirement} is only a convention: given the general expression for $ (\psi_k,\dot{\psi}_{n}) $ in the particular case $ k=n $, there's no way for controlling the generic phase between those two, but if \eqref{eq:requirement} is satisfied, then a formula like \eqref{eq:geometric_phase} must exist. 
+\end{rem}
+\begin{rem}
+	One could argue that changing the convention \eqref{eq:requirement} then the definition for \eqref{eq:geometric_phase} must change. This is absolutely reasonable, but nonetheless we will see that the geometric phase will not change under different assumptions: this invariance is one of the most important properties of the Berry Phase. 
+\end{rem}
 
 % ---------------------------------------------
 \section{Berry original derivation with parameter space}
-Berry said: the Hamiltonian, apart from being hermitian, depends on a set of external parameters, let's say $ \rp $, that is $ \Ham\equiv\Ham(\rp) $ with $ \rp $ belonging to a multidimensional real parameter space. We now let $ \rp $ itself to be time dependent, so that the Hamiltonian si explicitely time dependent $ \Ham(\rp(t)) $. The parameter that varies adiabatically is of course now $ \rp(t) $.
+We want no to present the work performed by Berry in his original work in 1983 in the spirit of the parameter space.
 
+The original assumption was that the Hamiltonian, apart from being hermitian, depends on a set of external parameters, let's say $ \rp $, that is $ \Ham\equiv\Ham(\rp) $ with $ \rp $ belonging to a multidimensional real parameter space. Then Berry imagined the following situation: suppose the external classical environment is slowly changing in time, like when we put a spin $ \frac{1}{2} $ particle in a magnetic field and we slowly change the external magnetic field. Imagine then the real parameter space being slowly dependent in time, that is to say, $ \rp $ itself to be time dependent, so that the Hamiltonian si explicitly time dependent $ \Ham(\rp(t)) $. The parameter now that varies adiabatically is of course now $ \rp(t) $.
+\begin{rem}
+	We recall that $ \rp(t) $ is a set of real independent parameters and thanks to the Adiabatic condition the quantity $ \pd{\rp}{t} $ is small.
+\end{rem}
 
 \begin{equation}
-\mathcal{C}=\left\{\rp(t)|0\leq t\leq T \right\}
+\mathcal{C}=\left\{\rp(t)\mid 0\leq t\leq T \right\}
 \label{eq:Curve_C}
 \end{equation}
+\textbf{Figure missing! Place here as soon as possible!}
 
+The curve $ \mathcal{C} $ is the curve traced by $ \rp(t) $ letting $ t $ varying. $ \mathcal{C} $ is of course cyclic.
+The curve $ \mathcal{C} $ is then our domain of interest and for each point in $ \mathcal{C} $ we have an associated Hamiltonian.
 \begin{align}
 \Ham(t)\Ket{n;\rp}=E_n(\rp)\Ket{n;\rp}\\
 \Braket{n';\rp|n;\rp}=\delta_{n'n}
 \end{align}
 and we have of course an orthonormal basis at each point of the multidimensional parameters space.
+\begin{rem}
+	To be precise, we should refer to the eigenvalues $ E_{n}(\rp) $ not as eigenvalues of the Hamiltonian but as \emph{eigenvalues of the Hamiltonian at a certain point $ \rp $ of the parameter space}. We recall moreover that each wavefunction $ \Ket{n;\rp} $ is defined up to a phase factor that may depend on $ n $ and on $ \rp. $ 
+\end{rem}
+\begin{rem}
+	Thanks to the non degeneracy of the eigenvalues of the Hamiltonian, we have no ambiguity in defining the eigenvectors of the Hamiltonian, that is to say, there are not crossing levels of energy. Let's say for example that we start from the point $ \rp(0) $ in tha parameter space, then we can recover a set of well defined single valued wavefunctions for the Hamiltonian $ \Ham(\rp(0)) $. Letting now $ t $ varying from $ 0 $ to $ T $ we have a complete set of well defined single valued vawefunctions for every point and when $ t=T $ we have the same set of eigenfunctions as we had in $ t=0. $ Each eigenfucntion remains, anyway, defined up to an arbitrary phase. 
+\end{rem}
 
-At this stage Berry recover the Adiabatic Theorem:
+At this stage Berry recover the Adiabatic Theorem and tries to solve the classical \Sch equation in the case in which the initial state is the $ n $-th eigenstate of the Hamiltonian at $ t=0 $:
 \begin{equation}
 \begin{cases}
 i\hbar\dot{\psi}(t)=\Ham(\rp(t))\psi(t)\\
 \psi(0)=\Ket{0;\rp(0)}
 \end{cases}
 \end{equation}
-which gives the solution
+which, for intermediate times, within the validity of the Adiabatic Theorem, gives the solution
 \begin{equation}
 \psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(\rp(t'))\diff t'+\gamma_n(t)}\Ket{n;\rp(t)}
+\label{eq:gen_solution}
 \end{equation}
-and now we have to plug the solution into the \Sch equation
+and we easily see that $ \gamma_n(0)=0, $ since it has to match with the initial condition.
 
-% --------- Second Lecture ------------
-From the initial condition $ \psi(0)=\psi_n(0) $ we have
-\begin{equation}
-\psi(t)=\sum_{n'}c_{n'}(t)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}\psi_{n'}(t)
-\end{equation}
+The first term in the exponential of eq.\eqref{eq:gen_solution} is the \emph{dynamical phase} while the term $ \gamma_n(t) $ is the geometric phase. This latter phase is non integrable and so far we are not ready to handle it.
 
-Then, if $ n'\neq n $, $ \dot{c}_n(t)\simeq 0 $ if $ \abs{\left(\psi_{n'},\pd{\Ham}{t}(t)\psi_n \right) }<<(E_{n'}-E_{n})/\hbar, $
-then we have $ \dot{c}_n(t)\simeq0, c_n(t)\simeq 1. $ And so this means that the \Sch solution takes the form of:
-\begin{equation}
-\psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}\psi_{n'}(t) \xrightarrow[t\to T]{} e^{-\frac{i}{\hbar}\int_{0}^{T}E_n(t)\diff t}\psi_{n}(t)\underbrace{\psi_n(T)}_{e^{i\phi_{geom}^{(n)}}\psi_n(0)}
-\end{equation}
-
-\begin{equation}
-\psi(T)\simeq \underbrace{e^{i\phi_{tot}^{(n)}}}_{\underbrace{e^{\frac{i}{\hbar}\int_{0}^{T}E_n(t)\diff t}}_{\text{dyn}}\times\underbrace{e^{i\phi_{geom}^{(n)}}}_{\text{geom}}}\psi(0).
-\end{equation}
-
+So the next step to take is to take the (general) solution \eqref{eq:gen_solution}, to plug it into the \Sch equation itself and try to extract an equation for $ \gamma_n(t) $.
+%% --------- Second Lecture ------------
+%From the initial condition $ \psi(0)=\psi_n(0) $ we have
+%\begin{equation}
+%\psi(t)=\sum_{n'}c_{n'}(t)e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}\psi_{n'}(t)
+%\end{equation}
+%
+%Then, if $ n'\neq n $, $ \dot{c}_n(t)\simeq 0 $ if $ \abs{\left(\psi_{n'},\pd{\Ham}{t}(t)\psi_n \right) }<<(E_{n'}-E_{n})/\hbar, $
+%then we have $ \dot{c}_n(t)\simeq0, c_n(t)\simeq 1. $ And so this means that the \Sch solution takes the form of:
+%\begin{equation}
+%\psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(t')\diff t'}\psi_{n'}(t) \xrightarrow[t\to T]{} e^{-\frac{i}{\hbar}\int_{0}^{T}E_n(t)\diff t}\psi_{n}(t)\underbrace{\psi_n(T)}_{e^{i\phi_{geom}^{(n)}}\psi_n(0)}
+%\end{equation}
+%
+%\begin{equation}
+%\psi(T)\simeq \underbrace{e^{i\phi_{tot}^{(n)}}}_{\underbrace{e^{\frac{i}{\hbar}\int_{0}^{T}E_n(t)\diff t}}_{\text{dyn}}\times\underbrace{e^{i\phi_{geom}^{(n)}}}_{\text{geom}}}\psi(0).
+%\end{equation}
+%
 \begin{rem}
-	The set $ \Ket{n;\rp} $ form a set of single-valued eigenvectors in the space we are concerning, Pay attention that this is a different remark than the condition $ \left(\psi_n(t),\dot{\psi}_n(t) \right) $.
+	The set $ \Ket{n;\rp} $ form a set of single-valued eigenvectors in the parameter space. Pay attention that this condition is the crucial difference in spirit with the derivation given in the previous section. There the original assumption was to put $ \left(\psi_n(t),\dot{\psi}_n(t) \right) $ in order to eliminate any arbitrary freedom on the choice of the initial wavefunction.
 \end{rem}
 
-Suppose to have the following situation: $ \psi(0)=\Ket{n,\rp(0)} $, that is, the initial condition is in one of the eigenstates for the Hamiltonian. Its time evolution is then defined by
-\begin{equation}
-\begin{cases}
-\psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(\rp(t'))\diff t'+i\gamma_n(t)}\Ket{n;\rp(t)}\\
-\gamma_n(t)=0
-\end{cases}
-\end{equation}
+%Suppose to have the following situation: $ \psi(0)=\Ket{n,\rp(0)} $, that is, the initial condition is in one of the eigenstates for the Hamiltonian.  Its time evolution is then defined by
+%\begin{equation}
+%\begin{cases}
+%\psi(t)\simeq e^{-\frac{i}{\hbar}\int_{0}^{t}E_n(\rp(t'))\diff t'+i\gamma_n(t)}\Ket{n;\rp(t)}\\
+%\gamma_n(t)=0
+%\end{cases}
+%\end{equation}
 
 \begin{rem}
 	What Berry did is the following: he applied the Adiabatic Theorem and obtained an approximated solution for $ \psi(t) $. He then put $ \psi(t) $ itself into the \Sch Equation and derived an equation of motion for $ \gamma_n(t) $
 \end{rem}
 
-So after some algebra we have, as a consequence of the Adiabatic Theorem,
+So, putting eq.\eqref{eq:gen_solution} into the \Sch equation, is equivalent to write (as a consequence of the Adiabatic Theorem)
 \begin{equation}
 \dot{\gamma}_n(t)\Ket{n;\rp(t)}\simeq i\ddt \Ket{n,\rp(t)}
 \end{equation}
 and then sandwiching with a Ket,
 \begin{align}
 	\dot{\gamma}_n(t)&\simeq i\Bra{n;\rp(t)}\ddt\Ket{n:\rp(t)}\\
-	&=i\Bra{n;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}\dot{\rp}(t)
+	&=i\Bra{n;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}\dot{\rp}(t)\footnote{We have to stress that by $ \underline{\nabla} $ we mean the "parameter derivative", that is the derivative with respect to the component of the vector $ \rp $}
 \end{align}
 
 \begin{rem}
@@ -241,7 +288,7 @@ and then sandwiching with a Ket,
 
 Performing the circuitation along the curve $ \mathcal{C} $ defined in \eqref{eq:Curve_C}, we have
 \begin{equation}
-\gamma_n(T)\equiv \gamma_n(0)=i\oint_{\mathcal{C}}\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\rp
+\gamma_n(T)\equiv \gamma_n(0)=i\oint_{\mathcal{C}}\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\dot{\rp}(t)\diff t=i\oint_{\mathcal{C}}\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\rp
 \label{eq:2.26}\end{equation} 
 and this is exactly what we wrote above.
 
