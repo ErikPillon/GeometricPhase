@@ -8,25 +8,28 @@ Let us take a $ t $-dependent Hamiltonian
 \begin{equation}
 i\hbar\ddt\psi(t)=\Ham(t)\psi(t)
 \end{equation}
-and assume that the system is cyclic in the sense that 
+and assume that we found a solution for the problem that is cyclic in the sense given in the previous chapter, that is,
 \begin{equation}
 \psi(T)=e^{i\psi_{tot}}\psi(0)
 \label{eq:3.1}
 \end{equation}
-No assumptions on the cyclicity of the Hamiltonian is assumed in \eqref{eq:3.1}, but if we have a periodicity on the solution we have 
+No assumptions on the cyclicity of the Hamiltonian is assumed in \eqref{eq:3.1}, nor no assumption on the adiabaticity of the Hamiltonian has been made neither and we also don't need the fact that $ \Ham(T)=\Ham(0) $, but if we have a periodicity on the solution we can associate to the \wf a new concept of geometric phase\footnote{from now on we'll distinguish the Berry phase from the present geometric phase since the concept we're dealing right now is quite different form the initial idea given by Berry: the concept of cyclicity and adiabaticity are now not needed.}: 
 \begin{equation}
-\phi_{geom}=\psi_{tot}-\phi_{dyn}
+\phi_{geom}=\phi_{tot}-\phi_{dyn}
 \end{equation}
 where
 \begin{equation}
 \phi_{dyn}=-\dfrac{i}{\hbar}\int_{0}^{T}\Bra{\psi(t)}\Ham(t)\Ket{\psi(t)}\diff t
+\label{eq:phi_dyn}
 \end{equation}
-
+Before exploit extensively the result achieved by Aharonov and Anandan, we can summarize them briefly:
 \begin{enumerate}
-	\item
-	\item 
+	\item \textbf{Clear definition of geometric phase}: under the condition of cyclicity of the solution $ \psi(t) $, it is possible to derive the quantity $ \phi_{tot} $. Then, given the prescription for the definition of a dynamical phase, Eq.~\eqref{eq:phi_dyn}, is possible to derive the geometric phase understood as a difference between two terms.
+	In particular, in the case of an adiabatic condition for the Hamiltonian, the calculation reduces to the ones already performed by Berry.
+	\item \textbf{The geometric phase depends only on the projection on the ray space}: it is not anymore important the \wf itself but it is only important the movement of the trace of the solution projected on the space of density matrices. Being a pure state, well defined, single valued unitary vector in Hilbert space for each time, $ \psi(t) $ can be uniquely determined by the corresponding 1 dimensional projection operator, or, as we will call it, \emph{a point in the ray space}. In a certain sense, Berry already stated this result, but the A-A were able to state this result in a more general perspective, stating that the geometric phase lives in the ray space.
+	\item \textbf{The parameter space concept is not needed to arrive to tha concept og geometric phase}: we're not required to know the Hamiltonian acquire its dependence on the \rp vector. 
 \end{enumerate}
-
+\section{First Mathematical Interlude}
 \begin{equation}
 \B=\left\{\psi\in\Hilbert\colon \Braket{\psi,\psi}=1\right\}\subset\Hilbert
 \end{equation}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  27 DEC 2018 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.12)  29 DEC 2018 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1741,32 +1741,36 @@ Package refcheck Warning: Unlabelled equation (\relax 2.47) on input line 306.
 
 Package refcheck Warning: Unlabelled equation (\relax 2.48) on input line 306.
 
-
-Package refcheck Warning: Unlabelled equation (\relax 2.49) on input line 312.
-
 [9]
 
-Package refcheck Warning: Unlabelled equation (\relax 2.50) on input line 315.
+Package refcheck Warning: Unlabelled equation (\relax 2.49) on input line 313.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.52) on input line 328.
+Package refcheck Warning: Unlabelled equation (\relax 2.50) on input line 317.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.53) on input line 337.
+Package refcheck Warning: Unlabelled equation (\relax 2.52) on input line 330.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.54) on input line 337.
+Package refcheck Warning: Unlabelled equation (\relax 2.53) on input line 341.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.55) on input line 337.
+Package refcheck Warning: Unlabelled equation (\relax 2.54) on input line 341.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.56) on input line 342.
+Package refcheck Warning: Unlabelled equation (\relax 2.55) on input line 341.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 2.59) on input line 352.
+Package refcheck Warning: Unlabelled equation (\relax 2.56) on input line 346.
 
-) (./Chapters/First_Generalization.tex [10]
+[10]
+
+Package refcheck Warning: Unlabelled equation (\relax 2.59) on input line 356.
+
+) (./Chapters/First_Generalization.tex [11] [12
+
+
+]
 chapter 3.
 
 Package refcheck Warning: Unlabelled equation (\relax 3.1) on input line 10.
@@ -1774,106 +1778,98 @@ Package refcheck Warning: Unlabelled equation (\relax 3.1) on input line 10.
 
 Package refcheck Warning: Unlabelled equation (\relax 3.3) on input line 19.
 
-
-Package refcheck Warning: Unlabelled equation (\relax 3.4) on input line 23.
-
-LaTeX Font Info:    Try loading font information for U+euf on input line 31.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+[13]
+LaTeX Font Info:    Try loading font information for U+euf on input line 34.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 
-Package refcheck Warning: Unlabelled equation (\relax 3.5) on input line 32.
+Package refcheck Warning: Unlabelled equation (\relax 3.5) on input line 35.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.6) on input line 36.
+Package refcheck Warning: Unlabelled equation (\relax 3.6) on input line 39.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.7) on input line 40.
+Package refcheck Warning: Unlabelled equation (\relax 3.7) on input line 43.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.8) on input line 45.
-
-[11
+Package refcheck Warning: Unlabelled equation (\relax 3.8) on input line 48.
 
 
-]
-
-Package refcheck Warning: Unlabelled equation (\relax 3.9) on input line 51.
+Package refcheck Warning: Unlabelled equation (\relax 3.9) on input line 54.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.10) on input line 56.
+Package refcheck Warning: Unlabelled equation (\relax 3.10) on input line 59.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.11) on input line 60.
+Package refcheck Warning: Unlabelled equation (\relax 3.11) on input line 63.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.12) on input line 64.
+Package refcheck Warning: Unlabelled equation (\relax 3.12) on input line 67.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.13) on input line 73.
+Package refcheck Warning: Unlabelled equation (\relax 3.13) on input line 76.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.15) on input line 73.
+Package refcheck Warning: Unlabelled equation (\relax 3.15) on input line 76.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.16) on input line 73.
+Package refcheck Warning: Unlabelled equation (\relax 3.16) on input line 76.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.17) on input line 73.
+Package refcheck Warning: Unlabelled equation (\relax 3.17) on input line 76.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.18) on input line 73.
+Package refcheck Warning: Unlabelled equation (\relax 3.18) on input line 76.
+
+[14]
+
+Package refcheck Warning: Unlabelled equation (\relax 3.19) on input line 83.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.19) on input line 80.
+Package refcheck Warning: Unlabelled equation (\relax 3.20) on input line 92.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.20) on input line 89.
+Package refcheck Warning: Unlabelled equation (\relax 3.21) on input line 92.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.21) on input line 89.
+Package refcheck Warning: Unlabelled equation (\relax 3.22) on input line 92.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.22) on input line 89.
+Package refcheck Warning: Unlabelled equation (\relax 3.23) on input line 92.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.23) on input line 89.
+Package refcheck Warning: Unlabelled equation (\relax 3.24) on input line 92.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.24) on input line 89.
+Package refcheck Warning: Unlabelled equation (\relax 3.25) on input line 98.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.25) on input line 95.
-
-[12]
-
-Package refcheck Warning: Unlabelled equation (\relax 3.26) on input line 99.
+Package refcheck Warning: Unlabelled equation (\relax 3.26) on input line 102.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.27) on input line 104.
+Package refcheck Warning: Unlabelled equation (\relax 3.27) on input line 107.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.28) on input line 113.
+Package refcheck Warning: Unlabelled equation (\relax 3.28) on input line 116.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.29) on input line 113.
+Package refcheck Warning: Unlabelled equation (\relax 3.29) on input line 116.
+
+[15]
+
+Package refcheck Warning: Unlabelled equation (\relax 3.30) on input line 120.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.30) on input line 117.
+Package refcheck Warning: Unlabelled equation (\relax 3.31) on input line 124.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.31) on input line 121.
+Package refcheck Warning: Unlabelled equation (\relax 3.32) on input line 128.
 
 
-Package refcheck Warning: Unlabelled equation (\relax 3.32) on input line 125.
+Package refcheck Warning: Unlabelled equation (\relax 3.33) on input line 132.
 
-
-Package refcheck Warning: Unlabelled equation (\relax 3.33) on input line 129.
-
-) (./Chapters/kinematic.tex [13] [14
-
-
-]
+) (./Chapters/kinematic.tex [16]
 chapter 4.
 
 Package refcheck Warning: Unlabelled equation (\relax 4.1) on input line 6.
@@ -1905,10 +1901,13 @@ Package refcheck Warning: Unlabelled equation (\relax 4.10) on input line 36.
 
 Package refcheck Warning: Unlabelled equation (\relax 4.11) on input line 36.
 
-) [15] [16
+) [17
 
 
-] (./main.bbl) [17
+] [18
+
+
+] (./main.bbl) [19
 
 
 ]
@@ -1918,20 +1917,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7E91FE88D6E84E4C5A09A79E06720B03;857.
+(rerunfilecheck)             Checksum: 91D537B128AB35A4A5EF3B7A9EBEB90A;932.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 25307 strings out of 493029
- 463817 string characters out of 6136233
+ 25318 strings out of 493029
+ 463939 string characters out of 6136233
  649231 words of memory out of 5000000
- 28144 multiletter control sequences out of 15000+600000
+ 28149 multiletter control sequences out of 15000+600000
  132597 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,100p,1245b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,15n,100p,1245b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1961,10 +1960,10 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/wasy2-ps/wasy10.pfb>
-Output written on main.pdf (23 pages, 496029 bytes).
+Output written on main.pdf (25 pages, 501131 bytes).
 PDF statistics:
- 480 PDF objects out of 1000 (max. 8388607)
- 427 compressed objects within 5 object streams
- 168 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 508 PDF objects out of 1000 (max. 8388607)
+ 446 compressed objects within 5 object streams
+ 174 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

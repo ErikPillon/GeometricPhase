@@ -300,17 +300,19 @@ In the end, we see that
 and so plugging \eqref{eq:2.27} into \eqref{eq:2.26} we obtain
 \begin{align}
 \gamma_n(\mathcal{C})&=-\Im \oint \Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\rp\\
-&=-\Im\iint_{\mathcal{S}}\nabla_n\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\mathcal{S}\\
+&=-\Im\iint_{\mathcal{S}}\nabla\wedge\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\mathcal{S}\text{\footnotemark}\\
 &=-\Im\iint_{\mathcal{S}}\left(\underline{\nabla}\Bra{n;\rp}\right)\wedge\left(\underline{\nabla}\Ket{n;\rp}\right)\cdot\diff\mathcal{S}\\
 &= -\Im \iint_{\mathcal{S}}\left(\sum_{m\neq n}\underline{\nabla}\Bra{n;\rp}\right)\Ket{m;\rp}\wedge\Bra{m;\rp}\underline{\nabla}\Ket{n;\rp}
 \end{align}
-and the term $ m=n $ is neglected since gives a zero contribution.
+\footnotetext{Following Berry's argument, we are now restricting ourselves in the case in which the parameter space is a 3D space, so the simplest form of Stoke's Theorem can be applied.}
+and the term $ m=n $ is neglected since gives a zero contribution: a pure imaginary term times a pure imaginary term gives an only real contribution, so neglected by the operator $ \Im. $
 
-Then from $ \Ham(\rp)\Ket{n;\rp}=E_n(\rp)\Ket{n;\rp} $ we obtain that for $ m\neq n $
+Then from $ \Ham(\rp)\Ket{n;\rp}=E_n(\rp)\Ket{n;\rp} $, applying the gradient operator on both sides, we obtain for $ m\neq n $
 \begin{equation}
-\Bra{m;\rp}\underline{\nabla}\Ket{n;\rp}=\dfrac{\Bra{m;\rp}\underline{\nabla}\Ham(\rp)\Ket{n;\rp}}{E_n(\rp)-E_m(\rp)}
+\Bra{m;\rp}\underline{\nabla}\Ket{n;\rp}=\dfrac{\Bra{m;\rp}\underline{\nabla}\Ham(\rp)\Ket{n;\rp}}{E_n(\rp)-E_m(\rp)}.
 \end{equation}
-with \begin{equation}
+The final result is then
+\begin{equation}
 \gamma_n(\mathcal{C})=-\iint_{\mathcal{S}}V_n(\rp)\cdot\diff\mathcal{S}
 \end{equation}
 where we defined $ V_n $ as 
@@ -319,7 +321,7 @@ V_n(\rp):=\Im\sum_{m\neq n}\dfrac{\Bra{n;\rp}\underline{\nabla}\Ham(\rp)\Ket{m;\
 \label{eq:2.31}
 \end{equation}
 \begin{rem}
-	Berry's comment at this stage is that the result does not depend on $ \rp $ since the gradient is only acting on $ \Ham(\rp) $, so it is independent on the choice of the phase of the wavefunction.
+	Berry's comment at this stage is that the result does not depend on $ \rp $ since the gradient is only acting on $ \Ham(\rp) $, so it is independent on the choice of the phase of the wavefunction. The final take at home message is then that the geometric phase $ \gamma_n(\mathcal{C}) $ does not depend on the particular choice of the phase of the eigenvector $ \Ket{n;\rp} $ of the Hamiltonian at each point of the parameter space, under the assumption that \emph{the eigenvectors are globally well defined}.
 	\label{rem:freedom}
 \end{rem}
 Remark \ref{rem:freedom} leads to an enormous amount of freedom in the choice of the global phase $ \chi(\rp) $
@@ -327,7 +329,9 @@ Remark \ref{rem:freedom} leads to an enormous amount of freedom in the choice of
 \Ket{n;\rp}\to e^{i\chi(\rp)}\Ket{n;\rp}
 \end{equation}
 \subsection{Two fold degeneracies}
-What is the phase in the proximity of a two folds degeneracy?
+Let us suppose that we are in the proximity of a two fold degeneracy. By degeneracy we mean that two levels of the Hamiltonian happen to be degenerate of a certain point of the phase space.
+
+%What is the phase in the proximity of a two folds degeneracy?
 
 We can suppose in $ \rp=0 $ we have a degeneracy for the Hamiltonian. So if we are far from zero, we have o problems at all, but if we are close to $ 0, $ we have to work in a different way. The two crossing levels are the most important, so from a Quantum Mechanical point of view, the problem is only a two level problem.
 \begin{align}
@@ -335,12 +339,12 @@ We can suppose in $ \rp=0 $ we have a degeneracy for the Hamiltonian. So if we a
 	& E_{+}(\rp)>E_-(\rp),\qquad \rp\neq 0\\
 	& E_{+}(\underline{0})=E_{-}(\underline{0})=0.
 \end{align} 
-So, now, without any loss of generality, we can make use of the Pauli Matrices:
+So, now, without any loss of generality, we can make use of the Pauli Matrices for defining the Hamiltonian to be in the following way
 \begin{align}
 	\Ham(\rp)=\dfrac{1}{2};\qquad E_{\pm}(\rp)=\pm\dfrac{1}{2}R, \qquad R=\abs{\rp}\\
 	\Ket{+;\rp}\Bra{+;\rp}=\dfrac{1}{2}\left(1\pm \hat{R}\cdot\underline{\sigma} \right)\label{eq:2.33}
 \end{align}
-And so we have to plug \eqref{eq:2.33} into \eqref{eq:2.31} immediately recognizing that $ E_n(0)-E_m(0)=+\frac{1}{2}R-(-\frac{1}{2}R) $. Then 
+And so we have to plug \eqref{eq:2.33} into \eqref{eq:2.31}: the summation becomes an only single term and, recognizing that $ E_n(0)-E_m(0)=+\frac{1}{2}R-(-\frac{1}{2}R) $, we obtain 
 \begin{equation}
 \underline{V}_{+}(\rp)=\frac{R_j}{2R^3}
 \label{eq:2.35}
