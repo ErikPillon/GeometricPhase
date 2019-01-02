@@ -1,36 +1,65 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = en_US
 \chapter{The kinematic approach and the Bargmann's Invariant}
+The so called Kinematic approach has been developed by \cite{mukunda1993quantum}. The key idea of the work was to look at all the possible parametrized curves in the space $ \B $. They're divided essentially in two groups of transformations:the first one was already seen changing the phase of $ \psi(s) $ at each point (gauge transformation) while the second one is the ones given by reparametrization. The leading question in this work was: what is the simplest structure we can define on the set of curves that are invariant under gauge transformations and that are invariant under reparametrization?
+
+Let us start by defining what is meant by reparametrization: we take a curve $ \mathcal{C} $ and we substitute in place of the parameter $ s $ a function dependent on $ s $, let's say $ f(s) $
 \begin{equation}
-\mathcal{C}\to\mathcal{C}'=\left\{\psi'(s')=\psi(s)\mid s'=f(s),\pd{df(s)}{ds}\geq 0 \right\}
+\mathcal{C}\to\mathcal{C}'=\left\{\psi'(s')=\psi(s)\mid s'=f(s),\frac{df(s)}{ds}\geq 0 \right\}
 \end{equation}
-\textbf{The key idea is to look at all the possible transformations that we can apply to the initial curves preserving the reparametrization invariance and the gauge invariance}
+%\textbf{The key idea is to look at all the possible transformations that we can apply to the initial curves preserving the reparametrization invariance and the gauge invariance}
 
 \begin{align}
 	\phi_{geom}\left[\mathcal{C} \right]&=\phi_{tot}\left[ \mathcal{C}\right]-\phi_{dyn}\left[\mathcal{C}\right]\label{eq:parametrization_invariant}\\
-	\phi_{tot}\left[\mathcal{C}\right]&=\arg(\psi(s_1),\psi(s_2)\\
+	\phi_{tot}\left[\mathcal{C}\right]&=\arg(\psi(s_1),\psi(s_2)\label{eq:4.3}\\
 	\phi_{dyn}\left[\mathcal{C}\right]&=\Im\int_{s_1}^{s_2}\left(\psi(s),\pd{d\psi(s)}{ds}\right)\diff s=-i\int_{s_1}^{s_2}\left(\psi(s),\pd{d\psi(s)}{ds}\right)\diff s=\int_{\mathcal{C}}\mathcal{A}\diff s
 \end{align}
 And the quantity in \eqref{eq:parametrization_invariant} needs to be reparametrization invariant and gauge invariant.
 
-
-
+The beauty of this formulation stands in the fact that the expression holds for any open path.
+\begin{enumerate}
+	\item We can now make a subtle connection with the two derivation of Berry work in Section 2. We said that we have an infinite freedom in choosing the initial phase of the wavefunction. This freedom can be connected at the freedom we have in choosing the lift we prefer for the evaluation of formula \eqref{eq:4.3}.
+	\item It does not take any effort to define the geometric phase for any open loop.
+	\item This approach is purely kinematic: there's no Hamiltonian, no \Sch equation. 
+\end{enumerate}
+We close this section with the statement
 \begin{equation}
-\phi_{geom}\left[\text{any geometric in $ \mathcal{R} $} \right]=0.
+\phi_{geom}\left[\text{any geodesic in $ \mathcal{R} $} \right]=0.
 \end{equation}
 \section{Bargmann's Invariant}
+This terminology was introduced by \cite{bargmann1964note} working on a proof of the Wigner Theorem. He gave the simplest non trivial Bargmann invariant. Take 3 generic unit vectors and we ensure none of them are mutually orthogonal:
 \begin{equation}
 \psi_{j},\quad j=1,2,3, \in \B
 \end{equation}
+So the definition of the third order Bargmann invariant is the following:
 \begin{align}
 \Delta_3\left(\psi_1,\psi_2,\psi_3\right)&=\left(\psi_1,\psi_2\right)\left(\psi_2,\psi_3\right)\left(\psi_3,\psi_1\right)\\
 &=\Tr(\rho_1\rho_2\rho_3)
 \end{align}
 Where by $ \rho_i, i=1,2,3 $ we denoted the density matrices and we recall that their product is a ray space quantity.
 
-So in general the phase of the Bargmann quantity can be shown to be a geometric phase
+It turns out that if $ \dim\Hilbert\geq2 $ then the above quantity is in general complex, the phase is non trivial.
+
+So in general the phase of the Bargmann quantity can be shown to be a geometric phase: first of all it can be splitted in a sum of different phases and since every path is a geodesic, then the argument of the inner product $ \left(\psi_i,\psi_j\right) $ is equal to the dynamical phase acquired along the path connecting the two points:
 \begin{align}
 	\arg(\Delta_3\left(\psi_1,\psi_2,\psi_3\right))&=\arg(\psi_1,\psi_2)+\arg(\psi_2,\psi_3)+\arg(\psi_3,\psi_1)\\
 	&=\phi_{dyn}\left[\mathcal{C}_{12}\right]+\phi_{dyn}\left[\mathcal{C}_{23}\right]+\phi_{dyn}\left[\mathcal{C}_{31}\right]\\
-	&=\phi_{dyn}\left[\mathcal{C}_{12}\cup\mathcal{C}_{23}\cup\mathcal{C}_{31} \right]
+	&=\phi_{dyn}\left[\mathcal{C}_{12}\cup\mathcal{C}_{23}\cup\mathcal{C}_{31} \right]\\
+	&=-\phi_{geom}\left[\mathcal{C}_{12}\cup\mathcal{C}_{23}\cup\mathcal{C}_{31} \right]
 \end{align}
+Notice that the definition of Bargmann invariant can be easily generalizable to any arbitrary dimension.
+\section{Examples}
+\begin{equation}
+E=
+\begin{pmatrix}
+E_x\\
+E_y
+\end{pmatrix}
+=
+\begin{pmatrix}
+E_1\\
+E_2
+\end{pmatrix}
+\in \R^2
+\end{equation}
+and the EM field can be described by the intensity $ I=E^{\dagger}E $ and by the polarization $ \hat{n}=\frac{1}{N}E^{\dagger}\tau E\in S_{Poincaré}^2 $

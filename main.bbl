@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,14 +11,32 @@ Yakir Aharonov and J~Anandan.
 \newblock \emph{Physical Review Letters}, 58\penalty0 (16):\penalty0 1593,
   1987.
 
+\bibitem[Bargmann(1964)]{bargmann1964note}
+Valentine Bargmann.
+\newblock Note on wigner's theorem on symmetry operations.
+\newblock \emph{Journal of Mathematical Physics}, 5\penalty0 (7):\penalty0
+  862--868, 1964.
+
 \bibitem[Born(1928)]{born1928m}
 M~Born.
 \newblock M. born and v. fock, z. phys. 51, 165 (1928).
 \newblock \emph{Z. Phys.}, 51:\penalty0 165, 1928.
 
+\bibitem[Mukunda and Simon(1993)]{mukunda1993quantum}
+N~Mukunda and R~Simon.
+\newblock Quantum kinematic approach to the geometric phase. i. general
+  formalism.
+\newblock \emph{Annals of Physics}, 228\penalty0 (2):\penalty0 205--268, 1993.
+
 \bibitem[Pancharatnam(1956)]{pancharatnam1956generalized}
 Shivaramakrishnan Pancharatnam.
 \newblock Generalized theory of interference and its applications.
 \newblock 44\penalty0 (6):\penalty0 398--417, 1956.
+
+\bibitem[Samuel and Bhandari(1988)]{samuel1988general}
+Joseph Samuel and Rajendra Bhandari.
+\newblock General setting for berry's phase.
+\newblock \emph{Physical Review Letters}, 60\penalty0 (23):\penalty0 2339,
+  1988.
 
 \end{thebibliography}

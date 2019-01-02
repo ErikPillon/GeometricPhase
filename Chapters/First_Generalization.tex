@@ -29,59 +29,78 @@ Before exploit extensively the result achieved by Aharonov and Anandan, we can s
 	\item \textbf{The geometric phase depends only on the projection on the ray space}: it is not anymore important the \wf itself but it is only important the movement of the trace of the solution projected on the space of density matrices. Being a pure state, well defined, single valued unitary vector in Hilbert space for each time, $ \psi(t) $ can be uniquely determined by the corresponding 1 dimensional projection operator, or, as we will call it, \emph{a point in the ray space}. In a certain sense, Berry already stated this result, but the A-A were able to state this result in a more general perspective, stating that the geometric phase lives in the ray space.
 	\item \textbf{The parameter space concept is not needed to arrive to tha concept og geometric phase}: we're not required to know the Hamiltonian acquire its dependence on the \rp vector. 
 \end{enumerate}
+
+% --------------------------------------------------
 \section{First Mathematical Interlude}
+So far, we've been concerning an Hilbert space $ \Hilbert $ of dimension $ \dim\Hilbert=N $ (where $ N $ could be eventually infinite) and where all the possible states are defined by $ \psi $. We define now the \textit{unit sphere} of this space, defined by all vectors that have unit norm:
 \begin{equation}
 \B=\left\{\psi\in\Hilbert\colon \Braket{\psi,\psi}=1\right\}\subset\Hilbert
 \end{equation}
-We notice immediately that $ \B $ is not a linear vector space. We define therefore the transformation
+We notice immediately that $ \B $ is not a linear vector space and that its dimension is $ N-1 $. 
+
+The group $ U(1) $ of phase factors act on this set in an obvious way:
 \begin{equation}
 \psi\in\B\Rightarrow \psi'=e^{i\alpha}\psi\in\B,\qquad 0\leq\alpha\leq 2\pi
-\end{equation}
-The idea is that two vectors that differ only by a phase factor should be regarded as equivalent. We can also define now the equivalence class by fixing $ \psi $ and letting $ \alpha $ varying:
+\end{equation} 
+
+We now want to introduce the concept of \textit{ray space}, that we will denote by $ \mathcal{R} $, as the quotient of $ \B $ with the action of $ U(1) $. 
+The idea is that two vectors that differ only by a phase factor should be regarded as equivalent.
+We can also define now the equivalence class by fixing $ \psi $ and letting $ \alpha $ varying:
 \begin{equation}
-\mathcal{R}:=\left\{\rho(\psi)=\Ket{\psi}\Bra{\psi} \text{ or } \psi^{\dagger}\psi | \psi\in\B \right\}.
+\mathcal{R}:=\left\{\rho(\psi)=\Ket{\psi}\Bra{\psi} \text{ or } \psi^{\dagger}\psi \mid \psi\in\B \right\}.
 \end{equation}
-We will call $ \mathcal{R} $ \textit{real space}, while $ \rho $ is the well known projective operator. We notice that if we denote by $ N $ the dimension of the Hilbert space $ \Hilbert $, then we have that $ \dim(\mathcal{R}) $ has $ 2(N-1) $ real dimensions (or equivalently $ N-1 $ complex dimensions).
+We denoted by $ \rho $ the well known projective operator, while we have to take care that the above set is not a linear vector space. 
+We notice that if we denote by $ N $ the dimension of the Hilbert space $ \Hilbert $, then we have that $ \dim(\mathcal{R}) $ has $ 2(N-1) $ real dimensions (or equivalently $ N-1 $ complex dimensions), or, in mathematical formalism, the space $ \cp{N-1} $.
 We define as well the inverse of the projection operator, the operator $ \pi $, in the following way:
-\begin{equation}
-\pi\colon \B\to\mathcal{R} \qquad \colon \qquad \psi\in\B\rightarrow \rho(\psi)=\psi^{\dagger}\psi\in\mathcal{R}
-\end{equation}
-and goes into $ CP^{N-1} $.
+\begin{align}
+\pi\colon \B&\to\mathcal{R} \\
+\psi&\rightarrow \rho(\psi)=\psi^{\dagger}\psi\in\mathcal{R}.
+\end{align}
 
 Points in the real space are in $ 1-1 $ correspondence with the pure real state of the system. The mathematical description is
 \begin{equation}
-\rho(\psi)\in\mathcal{R}\to\pi^{-1}(\rho(\psi)):=\left\{\psi'=e^{i\alpha}\psi\in\B|\psi \text{ fixed }, 0\leq\alpha\leq 2\pi \right\}\subset \B
+\rho(\psi)\in\mathcal{R}\to\pi^{-1}(\rho(\psi)):=\left\{\psi'=e^{i\alpha}\psi\in\B\mid\psi \text{ fixed }, 0\leq\alpha\leq 2\pi \right\}\subset \B
 \end{equation}
 
-We now consider curves on the space $ \B $. Given a curve 
+We now consider curves on the space $ \B $. Take a curve $ \mathcal{C} $ 
 \begin{equation}
 \mathcal{C}:=\left\{\psi(s)\in\B |s_1\leq s\leq s_2 \right\}\subset \B
 \end{equation}
-we consider its projection into the real space $ \mathcal{R} $ through $ \pi $ into the set 
+with suitable smoothing conditions on it that will depend on the use we will make of this curve. We consider its projection into the real space $ \mathcal{R} $ through $ \pi $ into the set 
 \begin{equation}
-C=\pi\left[\mathcal{C}\right]=\left\{\rho(\psi(s))=\psi(s)\psi^{\dagger}(s)\in\mathcal{R}|s_1\leq s\leq s_2 \right\}.
+C=\pi\left[\mathcal{C}\right]=\left\{\rho(\psi(s))=\psi(s)\psi^{\dagger}(s)\in\mathcal{R}|s_1\leq s\leq s_2 \right\}\subset\mathcal{R}.
 \end{equation}
-So for our purposes the most general curve will be 
+So for our purposes the most general lift will be 
 \begin{equation}
-\mathcal{C}'=\left\{\psi'(s)=e^{i\alpha(s)}\psi(s)|\psi(s)\in\mathcal{C}, s_1\leq s\leq s_2 \right\},
+\mathcal{C}'=\left\{\psi'(s)=e^{i\alpha(s)}\psi(s)|\psi(s)\in\mathcal{C}, s_1\leq s\leq s_2 \right\}\subset\B,
 \end{equation}
-that denotes all the possible lifts of the original projected curve. Now comes natural to define the tangent vector 
+that denotes all the possible lifts of the original projected curve. 
+
+Now, given a general curve $ \mathcal{C} $, comes natural to define the tangent vector 
 \begin{align}
-	u(s)&=\dfrac{d}{ds}\psi(s)=\dot{\psi}(s)\\
+	u(s)&=\dfrac{d}{ds}\psi(s)=\dot{\psi}(s)\label{eq:3.11}\\
 	(\psi(s),\dot{\psi}(s))&=\Im(\psi(s),u(s))\label{eq:3.12}\\
 	u'(s)&=e^{i\alpha(s)}(u(s)+i\dot{\alpha}(s)\psi(s))\\
 	u_{\perp}(s)&=u(s)-\psi(s)(\psi(s),u(s))=u_{\perp}'(s)=e^{i\alpha(s)}u_{\perp}(s)\\
-	\mathcal{L}\left[\mathcal{C}\right]&=\int_{s_1}^{s_2}\left(u_{\perp}(s),u_{\perp}(s)\right)^{1/2}\cdot\diff s \\
+\end{align}
+where it easy to show that Eq.~\eqref{eq:3.12} is a trivial consequence of Eq.~\eqref{eq:3.11}. The general length of a curve can be evaluated explicitly as
+\begin{align}
+	\mathcal{L}\left[\mathcal{C}\right]&=\int_{s_1}^{s_2}\left(u_{\perp}(s),u_{\perp}(s)\right)^{1/2}\cdot\diff s \label{eq:3.15}\\
 	&=\int_{s_1}^{s_2}\left\{\left(\dot{\psi}(s),\dot{\psi}(s)\right)-\left(\psi(s),\dot{\psi}(s)\right)-\left(\dot{\psi}(s),\psi(s)\right) \right\}^{1/2} \diff s
 \end{align}
-
+and we see that the length of the curve $ \mathcal{C} $ does not depend on the particular lift we choose since in the calculation tha particular $ \alpha $ we choose disappears in the product $ \left(u_{\perp}(s),u_{\perp}(s)\right) $. At this stage, some quick remarks are needed:
+\begin{enumerate}
+	\item The practical way to evaluate the length of a curve $ \mathcal{C} $ is to chose a particular lift, the one that is most suitable for, plug it into formula Eq.\eqref{eq:3.15} and evaluate directly. Since, therefore, it is a quantity independent from gauge transformation, it is indeed a quantity defined in the ray space $ \mathcal{R} $.
+	\item The quantity $ \mathcal{L}\left[\mathcal{C}\right] $ is reparametrization invariant: this is clear in view of formula \eqref{eq:3.15} since the integrand is \textit{homogeneous of degree 1 in velocity}. This property is stated saying that $ \mathcal{L}\left[\mathcal{C}\right] $ is a geometrical object. 
+\end{enumerate}
+Given then the functional \eqref{eq:3.15}, using calculus of variations we can derive an equation for an extremum of functional length, in particular a minimum, that we will call \textit{geodesic}.
 \begin{enumerate}[i]
-	\item $ \rho_1=\rho(\psi_1),\rho_2=\rho(\psi_2) $; then $ \Tr(\rho_1\rho_2)>0, $ i.e., $ \abs{\left(\psi_1,\psi_2\right)}\neq 0 $, then exists an unique geodesic $ \mathcal{C}_0 $
-	\item $ \psi_1\in\pi^{-1}(\rho_1), \psi_2\in\pi^{-1}(\rho_2) $
+	\item Suppose we take two point in ray space, let's say $ \rho_1=\rho(\psi_1^0),\rho_2=\rho(\psi_2^0) $ and suppose they're not orthogonal, in the sense that $ \Tr(\rho_1\rho_2)>0, $ i.e., $ \abs{\left(\psi_1,\psi_2\right)}\neq 0 $, then exists an unique geodesic $ \mathcal{C}_0 $ connecting $ \rho_1 $ to $ \rho_2 $ in the ray space.
+	\item For our purpose is then useful to define $ \psi_1\in\pi^{-1}(\rho_1), \psi_2\in\pi^{-1}(\rho_2) $ in such a way that their inner product is real and positive definite, 
 	\begin{equation}
 	\left(\psi_1,\psi_2 \right)=\cos\theta, \qquad 0\leq \theta\leq\pi(\alpha)
 	\end{equation}
-	In general the inner product between two complex quantities gives a complex quantity. If they're real and positive definite, they're said to be in phase one each other in the Plancherel sense.
+	In general the inner product between two complex quantities gives a complex quantity. If they're real and positive definite, they're said to be in phase one each other in the Pancharatnam sense. We will see later on why this name is given. Pay attention that the concept of "Pancharatnam phase" is applied only to Hilbert space vectors and not to ray space points.
 	\item If we consider the geodesic $ \mathcal{C}_0 $ from $ \rho_1 $ to $ \rho_2 $ and then we take the lift
 	\begin{gather}
 	\mathcal{C}_0=\left\{\psi_0(s)=\psi_1\cos(s)+(\psi_2-\psi_1\cos\theta)\frac{\sin s}{\sin\theta}\mid 0\leq s\leq\theta \right\}\subset\B\\
@@ -90,9 +109,11 @@ that denotes all the possible lifts of the original projected curve. Now comes n
 	u_{\perp}(s)=u_0(s),\qquad \pi\left[\mathcal{C}_0 \right]=\mathcal{C}_0\\
 	\mathcal{L}\left[\pi\left[\mathcal{C}_0 \right] \right]=\theta
 	\end{gather}
+	in particular a parameter $ s $ is chosen in the 'affine parametrization' spirit
 \end{enumerate}
+In principle, no upper bounds are imposed on the value of $ \mathcal{L}\left[\mathcal{C}\right] $; it could be even infinite.
 
-Now we want to introsuce another geometrical object: 
+Now we want to introduce another geometrical object: we don't have time for exhaustively talk about forms, but we want at least to give to the reader the formal definition.
 \begin{equation}
 \mathcal{A}=\text{one-form on $ \mathcal{B} $} = -i\psi^{\dagger}\diff \psi
 \end{equation}
@@ -107,27 +128,39 @@ In the language og differential geometry it is
 \end{equation}
 and its integral along any curve is the dynamical phase.
 
-\section{S-R generalization (1988)}
-\textbf{cyclic condition is also not needed for achieving a geometric phase}
+% -----------------------------------------------------
+% At this stage a set of examples have been given 
+% but not trascripted
+% -----------------------------------------------------
 
+\section{Samuel and Bhandari generalization (1988)}
+The previous mathematical section was aimed at the explanation of \cite{samuel1988general}
+
+The main result \cite{aharonov1987phase} achieved was that only a cyclic condition was needed for the presence of a geometric phase. Samuel and Bhandari showed that even the cyclic condition is not needed.
+%\textbf{cyclic condition is also not needed for achieving a geometric phase}
+Let us suppose to have a generic curve in $ \mathcal{R} $ whose only requirement is to be a geodesic 
 \begin{align}
-\mathcal{C_0}= \text{geodesic in $ \mathcal{R} $}&\Rightarrow \mathcal{C_0}=\text{special lift of $ \mathcal{C}_0 $ to $ \B $}\\
+C_0= \text{geodesic in $ \mathcal{R} $}&\Rightarrow \mathcal{C}_0=\text{special lift of $ \mathcal{C}_0 $ to $ \B $}\\
 &\Rightarrow \mathcal{C}=\text{general lift of $ \mathcal{C}_0 $ to $ \B $}
 \end{align}
-
+The result they achieved is that the phase gained along a path is equal to the integral of the one-form defined above: in particular, the result is independent of the lifts chosen.
 \begin{equation}
 \int_{\mathcal{C}_0}\mathcal{A}=\Im\int_{0}^{\theta}(\psi(s),u(s)\diff S=\arg(\psi(0),\psi(\theta))
 \end{equation}
-So how's they did: take the hermitian Hamiltonian $ \Ham $
+So how's they did: take the hermitian time dependent Hamiltonian $ \Ham(t) $
 \begin{equation}
 i\hbar \ddt \psi(t)=\Ham(t)\psi(t)
 \end{equation}
 and now consider the set of points 
 \begin{equation}
-\left\{0\leq t\leq T\colon\psi(t) \text{ is a solution} \right\}\equiv \mathcal{C}_0\subset \B
+\left\{0\leq t\leq T\colon\psi(t) \text{ is a solution} \right\}\equiv \mathcal{C}\subset \B
 \end{equation}
-
+We are now defining a path that start from $ \psi(0) $ and ends at $ \psi(T) $ for an arbitrary $ T $. From $ \psi(T) $ we want now to come back to $ \psi(0) $ following the unique geodesic connecting those two points. The final path will be then given by
 \begin{equation}
-\phi_{geom}\left[\text{Energetic \Sch equation} \right]=\oint_{\mathcal{C}_0}\mathcal{A}.
+\mathcal{C}'=\left\{\text{\Sch evolution from $ \psi(0) $ to $ \psi(T) $} \right\} \cup \left\{\text{Any geodesic from $ \psi(T) $ to $ \psi(0) $} \right\}
+\end{equation}
+That is, the path $ \mathcal{C}' $ is a closed loop in the Hilbert space. The main result is then that the geometric phase of the wavefunction is given by
+\begin{equation}
+\phi_{geom}\left[\text{Energetic \Sch equation} \right]=\oint_{\mathcal{C}'}\mathcal{A}.
 \end{equation}
 This is the tool in order to relax the assumption of the cyclic Hamiltonian.
