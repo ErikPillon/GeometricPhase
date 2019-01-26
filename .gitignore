@@ -1,0 +1,7 @@
+# TeX files not needed
+*.log
+*.out
+*.toc
+*.aux
+*.bbl
+*.blg
