@@ -214,10 +214,12 @@ where we assumed $ \rp(0)=\rp(T) $.
 \textbf{Figure missing! Place here as soon as possible!}
 
 The curve $ \mathcal{C} $ is the curve traced by $ \rp(t) $ letting $ t $ varying. $ \mathcal{C} $ is of course cyclic.
+
 The curve $ \mathcal{C} $ is then our domain of interest and for each point in $ \mathcal{C} $ we have an associated Hamiltonian.
 \begin{align}
 \Ham(t)\Ket{n;\rp}=E_n(\rp)\Ket{n;\rp}\\
-\Braket{n';\rp|n;\rp}=\delta_{n'n}
+\Braket{n';\rp|n;\rp}=\delta_{n'n}\\
+\sum_{n}\Ket{n;\rp}\Bra{n;\rp}=\mathds{1}
 \end{align}
 and we have of course an orthonormal basis at each point of the multidimensional parameters space.
 \begin{rem}
@@ -261,7 +263,7 @@ So the next step to take is to take the (general) solution \eqref{eq:gen_solutio
 %\end{equation}
 %
 \begin{rem}
-	The set $ \Ket{n;\rp} $ form a set of single-valued eigenvectors in the parameter space. Pay attention that this condition is the crucial difference in spirit with the derivation given in the previous section. There the original assumption was to put $ \left(\psi_n(t),\dot{\psi}_n(t) \right) $ in order to eliminate any arbitrary freedom on the choice of the initial wavefunction.
+	The set $ \Ket{n;\rp} $ form a set of single-valued eigenvectors in the parameter space. Pay attention that this condition is the crucial difference in spirit with the derivation given in the previous section. There the original assumption was to put $ \left(\psi_n(t),\dot{\psi}_n(t) \right)=0 $ in order to eliminate any arbitrary freedom on the choice of the initial \wf.
 \end{rem}
 
 %Suppose to have the following situation: $ \psi(0)=\Ket{n,\rp(0)} $, that is, the initial condition is in one of the eigenstates for the Hamiltonian.  Its time evolution is then defined by
@@ -280,9 +282,9 @@ So, putting eq.\eqref{eq:gen_solution} into the \Sch equation, is equivalent to 
 \begin{equation}
 \dot{\gamma}_n(t)\Ket{n;\rp(t)}\simeq i\ddt \Ket{n,\rp(t)}
 \end{equation}
-and then sandwiching with a Ket,
+and then sandwiching with a Bra $ \Bra{n,R(t)} $,
 \begin{align}
-	\dot{\gamma}_n(t)&\simeq i\Bra{n;\rp(t)}\ddt\Ket{n:\rp(t)}\\
+	\dot{\gamma}_n(t)&\simeq i\Bra{n;\rp(t)}\ddt\Ket{n;\rp(t)}\\
 	&=i\Bra{n;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}\dot{\rp}(t)\footnote{We have to stress that by $ \underline{\nabla} $ we mean the "parameter derivative", that is the derivative with respect to the component of the vector $ \rp $}
 \end{align}
 
@@ -298,21 +300,21 @@ and then sandwiching with a Ket,
 
 Performing the circuitation along the curve $ \mathcal{C} $ defined in \eqref{eq:Curve_C}, we have
 \begin{equation}
-\gamma_n(T)\equiv \gamma_n(0)=i\oint_{\mathcal{C}}\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\dot{\rp}(t)\diff t=i\oint_{\mathcal{C}}\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\rp
+\gamma_n(T)\equiv \gamma_n(0)=i\oint_{\mathcal{C}}\Bra{n;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}\dot{\rp}\diff t=i\oint_{\mathcal{C}}\Bra{n;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}\cdot\diff\rp(t)
 \label{eq:2.26}\end{equation} 
 and this is exactly what we wrote above.
 
 In the end, we see that 
 \begin{equation}
-\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}=i\Im\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}
+\Bra{n;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}=i\Im\Bra{n;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}
 \label{eq:2.27}
 \end{equation}
 and so plugging \eqref{eq:2.27} into \eqref{eq:2.26} we obtain
 \begin{align}
-\gamma_n(\mathcal{C})&=-\Im \oint \Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\rp\\
-&=-\Im\iint_{\mathcal{S}}\nabla\wedge\Bra{n;\rp}\underline{\nabla}\Ket{n;\rp}\cdot\diff\mathcal{S}\text{\footnotemark}\\
-&=-\Im\iint_{\mathcal{S}}\left(\underline{\nabla}\Bra{n;\rp}\right)\wedge\left(\underline{\nabla}\Ket{n;\rp}\right)\cdot\diff\mathcal{S}\\
-&= -\Im \iint_{\mathcal{S}}\left(\sum_{m\neq n}\underline{\nabla}\Bra{n;\rp}\right)\Ket{m;\rp}\wedge\Bra{m;\rp}\underline{\nabla}\Ket{n;\rp}
+\gamma_n(\mathcal{C})&=-\Im \oint \Bra{n;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}\cdot\diff\rp(t)\\
+&=-\Im\iint_{\mathcal{S}}\nabla\wedge\Bra{n;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}\cdot\diff\mathcal{S}\text{\footnotemark}\\
+&=-\Im\iint_{\mathcal{S}}\left(\underline{\nabla}\Bra{n;\rp(t)}\right)\wedge\left(\underline{\nabla}\Ket{n;\rp(t)}\right)\cdot\diff\mathcal{S}\\
+&= -\Im \iint_{\mathcal{S}}\left(\sum_{m\neq n}\underline{\nabla}\Bra{n;\rp(t)}\right)\Ket{m;\rp(t)}\wedge\Bra{m;\rp(t)}\underline{\nabla}\Ket{n;\rp(t)}
 \end{align}
 \footnotetext{Following Berry's argument, we are now restricting ourselves in the case in which the parameter space is a 3D space, so the simplest form of Stoke's Theorem can be applied.}
 and the term $ m=n $ is neglected since gives a zero contribution: a pure imaginary term times a pure imaginary term gives an only real contribution, so neglected by the operator $ \Im. $
